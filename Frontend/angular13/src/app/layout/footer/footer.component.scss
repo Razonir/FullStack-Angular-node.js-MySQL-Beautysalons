@@ -1,9 +1,21 @@
-.header{
-    background: cadetblue;
+
+
+.sticky{
+    position: fixed;
+    bottom: 0px;
+    background-color: #454d7d;
+    width: 100%;
     display: flex;
-    justify-content: center;
-    a{
-        padding: 20px;
-        color: white;   
+    justify-content: space-around;
+    height: 60px;
+    .icon{
+        width: 20px;
+        height: 20px;
+        margin: 20px;
+        background: black;
     }
+}
+
+.footer{
+    margin-bottom: 60px;
 }

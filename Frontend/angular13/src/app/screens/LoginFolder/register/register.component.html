@@ -1,0 +1,77 @@
+<form action="">
+      <h1 class="form-title">הרשמה</h1>
+    <div class="form-body">
+        <div class="form-group">
+            <input
+              type="text"
+              id="fname"
+              class="form-input"
+              placeholder=" "
+              [(ngModel)]="fname"
+            />
+            <label for="fname">שם פרטי</label><h2>{{fname}}</h2>
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              id="lname"
+              class="form-input"
+              placeholder=" "
+            />
+            <label for="lname">שם משפחה</label>
+          </div>
+      <div class="form-group">
+        <input
+          type="email"
+          id="email"
+          class="form-input"
+          placeholder=" "
+          autocomplete="off"
+        />
+        <label for="email">אימייל</label>
+      </div>
+      <div class="form-group">
+        <input
+          type="password"
+          id="password"
+          class="form-input"
+          placeholder=" "
+        />
+        <label for="password">סיסמא</label>
+      </div>
+      <div class="form-group">
+        <input
+          type="text"
+          id="city"
+          class="form-input"
+          placeholder=" "
+        />
+        <label for="city">עיר</label>
+      </div>
+      <div class="form-group">
+        <input
+          type="text"
+          id="address"
+          class="form-input"
+          placeholder=" "
+        />
+        <label for="address">כתובת(אפשרות)</label>
+      </div>
+      <div class="form-group">
+        <input
+          type="text"
+          id="phone"
+          class="form-input"
+          placeholder=" "
+        />
+        <label for="phone">מספר פלאפון</label>
+      </div>
+
+      <div class="wrap">
+        <button class="form-btn button">הירשם</button>
+      </div>
+      <div class="log-in">
+        <a href="#">רשום לאתר? התחבר</a>
+      </div>
+    </div>
+  </form>

@@ -1,9 +1,28 @@
 .header{
-    background: cadetblue;
+    background: #454d7d;
     display: flex;
+    width: 100%;
+    height: 150px;
     justify-content: center;
-    a{
-        padding: 20px;
-        color: white;   
+    .nav{
+        margin-top: 20px;
     }
+    a{
+        color: white;   
+        padding: 10px;
+        text-decoration: none;
+        &.active-link{
+            border-bottom: 1px solid black;
+        }
+    }
+    
 }
+.end{
+    background: white;
+    width: 100%;
+    height: 40px;
+    border-radius: 28px;
+    margin-top: -19px;
+    z-index: 9;
+}
+

@@ -1,0 +1,45 @@
+
+form {
+    background: #454d7d;
+    max-width: 20rem;
+    margin: 0 auto;
+    padding: 2rem;
+    box-shadow: #454d7d 0px 8px 24px;
+    border-radius: 0.9rem;
+    color: #ecdbba;
+  }
+
+  .form-group {
+    position: relative;
+    height: 3rem;
+    margin-bottom: 2rem;
+  }
+  .form-input {
+    width: 90%;
+    padding: 1rem;
+    border: 1.2px solid #bbb;
+    font-size: 1.2rem;
+    outline: none;
+    background: transparent;
+    color: #ecdbba;
+  }
+  .form-input:hover,
+  .form-input:focus {
+    border-color: var(--main-color);
+  }
+  label {
+    position: absolute;
+    right: 1rem;
+    top: 1.2rem;
+    padding: 0 0.5rem;
+    transition: top 200ms ease-in, font-size 200ms ease-out;
+  }
+  
+  .form-input:focus ~ label,
+  .form-input:not(:placeholder-shown).form-input:not(:focus) ~ label {
+    top: -0.5rem;
+    font-size: 0.8rem;
+    background-color: #454d7d;
+    border-radius: 10px;
+  }
+  
