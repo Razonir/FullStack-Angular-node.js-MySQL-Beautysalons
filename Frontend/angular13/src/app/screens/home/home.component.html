@@ -1,6 +1,24 @@
-<div class="form">
-    <input type="text" [(ngModel)]="user">
-    <input type="text" [(ngModel)]="email">
-    <input type="text" [(ngModel)]="password">
-    <button (click)="open()">click</button>
+<div class="page">
+    <div class="recommendedCont">
+        <div class="title">מומלצים בשבילך</div>
+        <div class="recommended">
+            <div routerLinkActive="active-link" routerLink="/businesspage" class="card" *ngFor="let item of data">
+                <div class="bigimg"><img src="../../../assets/blogo.png" alt="{{item.bname}}"></div>
+                <div class="item"><a class="bname">{{item.bname}} - {{item.bsubject}}</a></div>
+                <div class="item"><a class="bcity">{{item.bcity}}</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="page">
+    <div class="recommendedCont">
+        <div class="title">מומלצים בשבילך</div>
+        <div class="recommended">
+            <div routerLinkActive="active-link" routerLink="/businesspage" class="card" *ngFor="let item of data">
+                <div class="bigimg"><img src="../../../assets/blogo.png" alt="{{item.bname}}"></div>
+                <div class="item"><a class="bname">{{item.bname}} - {{item.bsubject}}</a></div>
+                <div class="item"><a class="bcity">{{item.bcity}}</a></div>
+            </div>
+        </div>
+    </div>
 </div>

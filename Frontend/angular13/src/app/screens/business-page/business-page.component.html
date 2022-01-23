@@ -1,0 +1,21 @@
+
+<div class="page">
+    <div class="business">
+            <div class="card" *ngFor="let item of data">
+                <div class="bigimg"><img src="../../../assets/blogo.png" alt="{{item.bname}}"></div>
+                <div class="item"><a class="bname">{{item.bname}}</a></div>
+                <div class="item"><a class="bflname">{{item.bfname}} {{item.blname}}</a></div>
+                <div class="item"><a class="bcity">{{item.bcity}} - {{item.baddress}}</a></div>
+                <div class="item"><a class="bhour">{{item.bhour}}</a></div>
+                <hr>
+                <div class="item"><a class="bdescription">{{item.bdescription}}</a></div>
+                <hr>
+                <div class="book">{{item.bphone}}</div>
+                <h2>שירותים</h2>
+                <div class="item"><a class="bdescription">{{item.bsubject}}</a></div>
+            
+                <h2>גלריה</h2>
+                <div class="smallimg"><img src="../../../assets/blogo.png" alt="{{item.bname}}"><img src="../../../assets/blogo.png" alt="{{item.bname}}"><img src="../../../assets/blogo.png" alt="{{item.bname}}"></div>
+            </div>
+    </div>
+</div>

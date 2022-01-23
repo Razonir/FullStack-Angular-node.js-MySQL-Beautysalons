@@ -1,0 +1,134 @@
+<form (ngSubmit) = "onSubmit()">
+    <h1 class="form-title">הרשמה</h1>
+  <div class="form-body">
+      <div class="form-group">
+          <input
+            type="text"
+            id="bfname"
+            name="bfname"
+            class="form-input"
+            placeholder=" "
+            [(ngModel)]="business.bfname"
+          />
+          <label for="bfname">שם פרטי</label>
+        </div>
+        <div class="form-group">
+            <input
+              type="text"
+              id="blname"
+              name="blname"
+              class="form-input"
+              placeholder=" "
+              [(ngModel)]="business.blname"
+            />
+            <label for="blname">שם משפחה</label>
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              id="bname"
+              name="bname"
+              class="form-input"
+              placeholder=" "
+              [(ngModel)]="business.bname"
+            />
+            <label for="bname">שם עסק</label>
+          </div>
+    <div class="form-group">
+      <input
+        type="email"
+        id="bemail"
+        name="bemail"
+        class="form-input"
+        placeholder=" "
+        autocomplete="off"
+        [(ngModel)]="business.bemail"
+      />
+      <label for="bemail">אימייל</label>
+    </div>
+    <div class="form-group">
+      <input
+        type="password"
+        id="bpassword"
+        name="bpassword"
+        class="form-input"
+        placeholder=" "
+        [(ngModel)]="business.bpassword"
+      />
+      <label for="bpassword">סיסמא</label>
+    </div>
+    <div class="form-group">
+      <input
+        type="text"
+        id="bdescription"
+        name="bdescription"
+        class="form-input"
+        placeholder=" "
+        [(ngModel)]="business.bdescription"
+      />
+      <label for="bdescription">תיאור</label>
+    </div>
+    <div class="form-group">
+      <input
+        type="text"
+        id="bcity"
+        name="bcity"
+        class="form-input"
+        placeholder=" "
+        [(ngModel)]="business.bcity"
+      />
+      <label for="bcity">עיר</label>
+    </div>
+    <div class="form-group">
+      <input
+        type="text"
+        id="baddress"
+        name="baddress"
+        class="form-input"
+        placeholder=" "
+        [(ngModel)]="business.baddress"
+      />
+      <label for="baddress">כתובת</label>
+    </div>
+    <div class="form-group">
+        <input
+          type="text"
+          id="bphone"
+          name="bphone"
+          class="form-input"
+          placeholder=" "
+          [(ngModel)]="business.bphone"
+        />
+        <label for="bphone">פלאפון</label>
+      </div>
+      <div class="form-group">
+        <input
+          type="text"
+          id="bsubject"
+          name="bsubject"
+          class="form-input"
+          placeholder=" "
+          [(ngModel)]="business.bsubject"
+        />
+        <label for="bsubject">תחום</label>
+      </div>
+      <div class="form-group">
+      <input
+      type="text"
+      id="blogo"
+      name="blogo"
+      class="form-input"
+      placeholder=" "
+      [(ngModel)]="business.blogo"
+    />
+    <label for="blogo">לוגו</label>
+  </div>
+    <div class="wrap">
+      <button type="submit"  class="form-btn button">הירשם</button>
+    </div>
+    <div class="log-in">
+      <a href="#">רשום כעסק? התחבר</a>
+    </div>
+  </div>
+</form>
+

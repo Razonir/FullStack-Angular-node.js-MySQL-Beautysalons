@@ -1,10 +1,41 @@
-.form{
+.page{
+    margin: 0 5%;
+
+    .title{
+        margin: 0 8%;
+        font-size: 30px;
+        color: #454d7d;
+    }
+.recommended{
     display: flex;
     justify-content: center;
-    align-content: center;
-    flex-direction: column;
     flex-wrap: wrap;
-    input{
-        width: 200px;
+    .card{
+        width: 270px;
+        padding: 10px;
+        background: rgb(255, 255, 255);
+        border-radius: 12px;
+        box-shadow: 0px 5px 10px #42454610;
+        color: #454d7d;
+        margin: 10px 25px;
+        transition: 0.5s;
+        img{
+            width: 100%;
+            border-radius: 5px;
+            height: 100px;
+
+        }
+        .item{
+            font-size: 17px;
+            .bname{
+                font-weight: bolder;
+            }
+        }
+        &:hover{
+            box-shadow: 0px 5px 10px #1c1d1d25;
+            transform: scale(0.95);
+        }
     }
+
+}
 }
