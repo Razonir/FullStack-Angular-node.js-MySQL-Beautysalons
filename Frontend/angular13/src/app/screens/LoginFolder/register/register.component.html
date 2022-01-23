@@ -1,77 +1,92 @@
-<form action="">
+<form (ngSubmit) = "onSubmit()">
       <h1 class="form-title">הרשמה</h1>
     <div class="form-body">
         <div class="form-group">
             <input
               type="text"
-              id="fname"
+              id="userfname"
+              name="userfname"
               class="form-input"
               placeholder=" "
-              [(ngModel)]="fname"
+              [(ngModel)]="user.userfname"
             />
-            <label for="fname">שם פרטי</label><h2>{{fname}}</h2>
+            <label for="fname">שם פרטי</label>
           </div>
           <div class="form-group">
             <input
               type="text"
-              id="lname"
+              id="userlname"
+              name="userlname"
               class="form-input"
               placeholder=" "
+              [(ngModel)]="user.userlname"
             />
-            <label for="lname">שם משפחה</label>
+            <label for="userlname">שם משפחה</label>
           </div>
       <div class="form-group">
         <input
           type="email"
-          id="email"
+          id="useremail"
+          name="useremail"
           class="form-input"
           placeholder=" "
           autocomplete="off"
+          [(ngModel)]="user.useremail"
         />
-        <label for="email">אימייל</label>
+        <label for="useremail">אימייל</label>
       </div>
       <div class="form-group">
         <input
           type="password"
-          id="password"
+          id="userpassword"
+          name="userpassword"
           class="form-input"
           placeholder=" "
+          [(ngModel)]="user.userpassword"
         />
-        <label for="password">סיסמא</label>
+        <label for="userpassword">סיסמא</label>
       </div>
       <div class="form-group">
         <input
           type="text"
-          id="city"
+          id="usercity"
+          name="usercity"
           class="form-input"
           placeholder=" "
+          [(ngModel)]="user.usercity"
         />
-        <label for="city">עיר</label>
+        <label for="usercity">עיר</label>
       </div>
       <div class="form-group">
         <input
           type="text"
-          id="address"
+          id="useraddress"
+          name="useraddress"
           class="form-input"
           placeholder=" "
+          [(ngModel)]="user.useraddress"
         />
-        <label for="address">כתובת(אפשרות)</label>
+        <label for="useraddress">כתובת(אפשרות)</label>
       </div>
       <div class="form-group">
         <input
           type="text"
-          id="phone"
+          id="userphone"
+          name="userphone"
           class="form-input"
           placeholder=" "
+          [(ngModel)]="user.userphone"
         />
-        <label for="phone">מספר פלאפון</label>
+        <label for="userphone">מספר פלאפון</label>
       </div>
 
       <div class="wrap">
-        <button class="form-btn button">הירשם</button>
+        <button type="submit"  class="form-btn button">הירשם</button>
       </div>
       <div class="log-in">
         <a href="#">רשום לאתר? התחבר</a>
       </div>
     </div>
   </form>
+
+  

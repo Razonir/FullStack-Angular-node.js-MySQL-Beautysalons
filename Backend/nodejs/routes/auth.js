@@ -12,17 +12,12 @@ router.post(
   '/signup',
   [
     body('userfname').trim().not().isEmpty(),
-    body('useremail')
-      .isEmail()
-      .withMessage('Please enter a valid useremail.')
-      .custom(async (useremail) => {
-        const user = await User.find(useremail);
-        if (user[0].length > 0) {
-          return Promise.reject('useremail address already exist!');
-        }
-      })
-      .normalizeEmail(),
-      body('userpassword').trim().not().isEmpty()
+    body('userlname').trim().not().isEmpty(),
+    body('useremail').isEmail().normalizeEmail().not().isEmpty(),
+      body('userpassword').trim().not().isEmpty(),
+      body('usercity').trim().not().isEmpty(),
+      body('useraddress').trim().not().isEmpty(),
+      body('userphone').trim().not().isEmpty()
     ],
   authController.signup
 );
