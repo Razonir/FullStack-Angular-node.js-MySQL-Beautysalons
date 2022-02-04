@@ -1,12 +1,14 @@
 <div class="web">
     <div class="header">
         <div class="nav">
+            <div *ngIf="userDetails==null"> 
+                    <a routerLinkActive="active-link" routerLink="/login">התחברות</a>
+                    <a routerLinkActive="active-link" routerLink="/register">הרשמה</a>
+                    <a routerLinkActive="active-link" routerLink="/registerbusiness">עסק</a>
+            </div>
             <a routerLink="/">בית</a>
             <a routerLinkActive="active-link" routerLink="/CryptoComponent">קריפטו</a>
-            <a routerLinkActive="active-link" routerLink="/login">התחברות</a>
-            <a routerLinkActive="active-link" routerLink="/register">הרשמה</a>
-            <a routerLinkActive="active-link" routerLink="/registerbusiness">עסק</a>
-            
+            <a routerLink="/" (click)="signout()">התנתק</a>
         </div>
         
     </div>

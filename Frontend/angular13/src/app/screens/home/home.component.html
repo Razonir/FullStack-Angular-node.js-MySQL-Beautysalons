@@ -2,9 +2,12 @@
     <div class="alert">?</div>
 </div>
 <div class="page">
+    <div *ngIf="userDetails!=null">  1
+          <div *ngIf="userDetails.userrole === 'subscriber'">
+            2
+          </div>
+    </div>
     <div class="recommendedCont">
-        {{userDetails}}
-
         <div class="title">מומלצים בשבילך</div>
         <div class="recommended">
             <div routerLinkActive="active-link" [routerLink]="['businesspage/',item.bid]" class="card" *ngFor="let item of data">
