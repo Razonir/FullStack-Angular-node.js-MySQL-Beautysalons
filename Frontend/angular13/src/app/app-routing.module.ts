@@ -13,7 +13,19 @@ const routes: Routes = [
 {path: 'login', component: LoginComponent},
 {path: 'register', component: RegisterComponent},
 {path: 'registerbusiness', component: BusinessregisterComponent},
-{path: 'businesspage', component: BusinessPageComponent},
+{
+  path: 'businesspage',
+  children: [
+    {
+      path: '',
+      component: BusinessPageComponent
+    },
+    {
+      path: ':bid',
+      component: BusinessPageComponent
+    }
+  ] 
+},
 {path: '**', redirectTo: ""}
 ];
 

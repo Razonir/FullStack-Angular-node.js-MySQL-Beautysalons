@@ -7,9 +7,24 @@ const authController = require('../controllers/auth');
 const businessController = require('../controllers/business');
 const db = require('../util/database')
 
+exportbid = Business.bid;
 router.get('/business', businessController.fetchAll);
 
-router.get('/business/1', businessController.getOne);
+router.get('/business/:bid',(req,res,next)=>{
+  console.log(req.params.bid);
+  Business.findById(req.params.bid)
+  .then(result =>{
+    res.status(200).json({
+      business:result
+    })
+  })
+  .catch(err=>{
+    console.log(err);
+    res.status(500).json({
+      error:err
+    })
+  })
+})
 
 router.post(
   '/signup',

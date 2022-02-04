@@ -21,7 +21,6 @@ export class BusinessregisterComponent implements OnInit {
   }
   onSubmit(){
     console.log(this.business);
-    console.log("w");
     this.businessService.createBusiness(this.business).subscribe(
       response => this.goToHome(),
       error => console.error('Error!',error)

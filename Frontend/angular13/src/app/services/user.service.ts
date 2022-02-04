@@ -8,7 +8,6 @@ import { registerLocaleData } from '@angular/common';
 })
 export class UserService {
 
-
   private baseURL = "http://localhost:3000/";
   constructor(private httpClient: HttpClient) { }
 
@@ -16,4 +15,5 @@ export class UserService {
     let registerUrl = this.baseURL+'auth/signup'
     return this.httpClient.post<any>(`${registerUrl}`,user);
   }
+
 }

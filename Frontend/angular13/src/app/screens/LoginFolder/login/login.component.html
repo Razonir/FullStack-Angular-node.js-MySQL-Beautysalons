@@ -1,0 +1,34 @@
+<form (ngSubmit) = "onSubmit()">
+    <h1 class="form-title">התחבר</h1>
+  <div class="form-body">
+    <div class="form-group">
+      <input
+        type="email"
+        id="bemail"
+        name="bemail"
+        class="form-input"
+        placeholder=" "
+        autocomplete="off"
+        [(ngModel)]="user.useremail"
+      />
+      <label for="useremail">אימייל</label>
+    </div>
+    <div class="form-group">
+      <input
+        type="password"
+        id="bpassword"
+        name="bpassword"
+        class="form-input"
+        placeholder=" "
+        [(ngModel)]="user.userpassword"
+      />
+      <label for="userpassword">סיסמא</label>
+    </div>
+
+    <div class="wrap">
+      <button type="submit"  class="form-btn button">התחבר</button>
+    </div>
+
+  </div>
+</form>
+

@@ -1,7 +1,7 @@
 
 <div class="page">
     <div class="business">
-            <div class="card" *ngFor="let item of data">
+            <div class="card" *ngIf="data.business[0][0] as item">
                 <div class="bigimg"><img src="../../../assets/blogo.png" alt="{{item.bname}}"></div>
                 <div class="item"><a class="bname">{{item.bname}}</a></div>
                 <div class="item"><a class="bflname">{{item.bfname}} {{item.blname}}</a></div>

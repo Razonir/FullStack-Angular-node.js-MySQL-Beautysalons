@@ -1,12 +1,11 @@
 
 form {
-    background: #454d7d;
+    background: white;
     max-width: 20rem;
-    margin: 0 auto;
+    margin: 1% auto;
     padding: 2rem;
-    box-shadow: #454d7d 0px 8px 24px;
-    border-radius: 0.9rem;
-    color: #ecdbba;
+    border-radius: 12px;
+    color: #454d7d;
   }
 
   .form-group {
@@ -17,11 +16,12 @@ form {
   .form-input {
     width: 90%;
     padding: 1rem;
-    border: 1.2px solid #bbb;
+    border: 1.2px solid #454d7d;
     font-size: 1.2rem;
     outline: none;
+    border-radius: 12px;
     background: transparent;
-    color: #ecdbba;
+    color: #454d7d;
   }
   .form-input:hover,
   .form-input:focus {
@@ -39,13 +39,13 @@ form {
   .form-input:not(:placeholder-shown).form-input:not(:focus) ~ label {
     top: -0.5rem;
     font-size: 0.8rem;
-    background-color: #454d7d;
+    background-color: white;
     border-radius: 10px;
   }
   
 .form-btn{
-  background-color: white;
-  color: #454d7d;
+  background-color: #f6733b;
+  color: #ffffff;
   width: 100%;
   height: 40px;
   cursor: pointer;

@@ -19,12 +19,13 @@ module.exports = class Business {
   static fetchAll() {
     return db.execute('SELECT * FROM Business');
   }
-  static getOne() {
-    return db.execute('SELECT * FROM Business where bid = 1');
-  }
 
   static find(bemail) {
     return db.execute('SELECT * FROM Business WHERE bemail = ?', [bemail]);
+  }
+
+  static findById(bid) {
+    return db.execute('SELECT * FROM Business WHERE bid = ?', [bid]);
   }
 
   static save(business) {

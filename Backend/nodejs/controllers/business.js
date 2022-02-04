@@ -14,16 +14,6 @@ exports.fetchAll = async (req, res, next) => {
     }
   };
 
-  exports.getOne = async (req, res, next) => {
-    try {
-      const [oneBusiness] = await Business.getOne();
-      res.status(200).json(oneBusiness);
-    } catch (err) {
-      if (!err.statusCode) {
-        err.statusCode = 500;
-      }
-      next(err);
-    }
-  };
+
 
   
