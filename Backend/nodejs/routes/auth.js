@@ -58,5 +58,8 @@ router.post(
   authController.signupbusiness
 );
 
+router.post('/login',   authController.login);
+
+router.post('/',authController.getUserDetails);
 
 module.exports = router;

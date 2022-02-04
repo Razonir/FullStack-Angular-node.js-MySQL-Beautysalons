@@ -1,4 +1,9 @@
-
+.header{
+  text-align: center;
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 15px;
+}
 form {
     background: white;
     max-width: 20rem;
@@ -8,12 +13,11 @@ form {
     color: #454d7d;
   }
   
-  .form-group {
+  input{
     position: relative;
-    height: 3rem;
     margin-bottom: 2rem;
   }
-  .form-input {
+  input {
     width: 90%;
     padding: 1rem;
     border: 1.2px solid #454d7d;
@@ -23,8 +27,8 @@ form {
     background: transparent;
     color: #454d7d;
   }
-  .form-input:hover,
-  .form-input:focus {
+  input:hover,
+  input:focus {
     border-color: var(--main-color);
   }
   label {
@@ -35,8 +39,8 @@ form {
     transition: top 200ms ease-in, font-size 200ms ease-out;
   }
   
-  .form-input:focus ~ label,
-  .form-input:not(:placeholder-shown).form-input:not(:focus) ~ label {
+  input:focus ~ label,
+  input:not(:placeholder-shown)input:not(:focus) ~ label {
     top: -0.5rem;
     font-size: 0.8rem;
     background-color: white;

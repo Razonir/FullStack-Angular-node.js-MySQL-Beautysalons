@@ -15,6 +15,10 @@ module.exports = class User {
     return db.execute('SELECT * FROM users WHERE useremail = ?', [useremail]);
   }
 
+  static getDetails(uid) {
+    return db.execute('SELECT * FROM users WHERE userid = ?', [uid]);
+  }
+
   static save(users) {
     return db.execute(
       'INSERT INTO users (userfname,userlname, useremail, userpassword,usercity,useraddress,userphone) VALUES (?, ?, ?, ?, ? ,? ,?)',
