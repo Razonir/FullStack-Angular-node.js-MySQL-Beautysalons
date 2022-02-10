@@ -9,6 +9,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class HeaderComponent implements OnInit {
 
+
   userDetails:any
   data:any
   constructor(private businessService:BusinessService,private userService:UserService){}
@@ -18,10 +19,10 @@ export class HeaderComponent implements OnInit {
     this.userService.getUserDetails(uid).subscribe((data)=>{
       this.userDetails = data.userDetails;
     });
-
-
+    this.businessService.getData().subscribe((data)=>{
+      this.data=data
+    })
   }
-
 
   signout(){
     return localStorage.clear(),    window.location.reload();

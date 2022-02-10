@@ -1,12 +1,15 @@
 <div class="top">
     <div class="alert">?</div>
 </div>
-<div class="page">
-    <div *ngIf="userDetails!=null">  1
-          <div *ngIf="userDetails.userrole === 'subscriber'">
-            2
-          </div>
+<div *ngIf="userDetails!=null">  
+    <div *ngIf="userDetails.userrole === 'subscriber'">
+      2
     </div>
+    <div *ngIf="userDetails.userrole === 'admin'">
+      <a></a>
+    </div>
+</div>
+<div class="page">
     <div class="recommendedCont">
         <div class="title">מומלצים בשבילך</div>
         <div class="recommended">
@@ -21,7 +24,7 @@
 <div class="page">
     <div class="recommendedCont">
         <div class="title">מומלצים בשבילך</div>
-        <div class="recommended">
+        <div class="media-scroller snaps-inline">
             <div routerLinkActive="active-link" [routerLink]="['businesspage/',item.bid]" class="card" *ngFor="let item of data">
                 <div class="bigimg"><img src="../../../assets/blogo.png" alt="{{item.bname}}"></div>
                 <div class="item"><a class="bname">{{item.bname}} - {{item.bsubject}}</a></div>

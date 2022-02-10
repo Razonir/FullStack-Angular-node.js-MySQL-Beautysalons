@@ -1,20 +1,30 @@
 <div class="web">
+    <div *ngIf="userDetails!=null">  
+        <div class="admin" *ngIf="userDetails.userrole === 'admin'">
+          <a routerLink="/admin">הגדרות מנהל</a>
+        </div>
+    </div>
     <div class="header">
         <div class="nav">
-            <div *ngIf="userDetails==null"> 
-                    <a routerLinkActive="active-link" routerLink="/login">התחברות</a>
-                    <a routerLinkActive="active-link" routerLink="/register">הרשמה</a>
-                    <a routerLinkActive="active-link" routerLink="/registerbusiness">עסק</a>
-            </div>
+            
             <a routerLink="/">בית</a>
             <a routerLinkActive="active-link" routerLink="/CryptoComponent">קריפטו</a>
+            <span *ngIf="userDetails!=null"> 
             <a routerLink="/" (click)="signout()">התנתק</a>
+            </span>
+            <span *ngIf="userDetails==null"> 
+                <a routerLinkActive="active-link" routerLink="/login">התחברות</a>
+                <a routerLinkActive="active-link" routerLink="/register">הרשמה</a>
+                <a routerLinkActive="active-link" routerLink="/registerbusiness">עסק</a>
+            </span>
+
         </div>
         
     </div>
 </div>
 <div class="app">
     <div class="header">
+        
         <div routerLink=".." class="back"><</div>
     </div>
     <div class="end">
