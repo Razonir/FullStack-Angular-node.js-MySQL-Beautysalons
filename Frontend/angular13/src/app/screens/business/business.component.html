@@ -1,0 +1,21 @@
+<div class="topcard">
+    <app-header></app-header>
+    <div class="topcardcontent">
+        <div class="right">
+        </div>
+        <div class="left">
+        </div>
+    </div>
+</div>
+<div class="page">
+    <div class="recommendedCont">
+        <div class="title">מומלצים בשבילך</div>
+        <div class="recommended">
+            <div routerLinkActive="active-link" [routerLink]="['/businesspage/',item.bid]" class="card" *ngFor="let item of data">
+                    <div class="bigimg"><img src="../../../assets/blogo.png" alt="{{item.bname}}"></div>
+                    <div class="item"><a class="bname">{{item.bname}} - {{item.bsubject}}</a></div>
+                    <div class="item"><a class="bcity">{{item.bcity}}</a></div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,32 +1,26 @@
-<div class="web">
-    <div *ngIf="userDetails!=null">  
-        <div class="admin" *ngIf="userDetails.userrole === 'admin'">
-          <a routerLink="/admin">הגדרות מנהל</a>
-        </div>
-    </div>
-    <div class="header">
-        <div class="nav">
-            
-            <a routerLink="/">בית</a>
-            <a routerLinkActive="active-link" routerLink="/CryptoComponent">קריפטו</a>
-            <span *ngIf="userDetails!=null"> 
-            <a routerLink="/" (click)="signout()">התנתק</a>
-            </span>
-            <span *ngIf="userDetails==null"> 
-                <a routerLinkActive="active-link" routerLink="/login">התחברות</a>
-                <a routerLinkActive="active-link" routerLink="/register">הרשמה</a>
-                <a routerLinkActive="active-link" routerLink="/registerbusiness">עסק</a>
-            </span>
+<header>
 
-        </div>
-        
+    <input type="checkbox" id="toggle-btn">
+    <label for="toggle-btn" class="show-menu-btn">=</label>
+    <div class="brand-logo">
+        <img src="/assets/biggirl.png" alt="Brand Logo">
     </div>
-</div>
-<div class="app">
-    <div class="header">
-        
-        <div routerLink=".." class="back"><</div>
+    <div class="brand-logo">
+        <span><b>לוגו</b><br>תיאור-קצר</span>
     </div>
-    <div class="end">
-    </div>
-</div>
+
+    <nav>
+        <ul class="navigation">
+            <li><a routerLinkActive="active-link" routerLink="/CryptoComponent">קריפטו</a></li>
+            <li><span *ngIf="userDetails!=null"><a routerLink="/" (click)="signout()">התנתק</a></span></li>
+                <span *ngIf="userDetails==null"> 
+                    <li><a routerLinkActive="active-link" routerLink="/login">התחברות</a></li>
+                        <li><a routerLinkActive="active-link" routerLink="/register">הרשמה</a></li>
+                            <li> <a routerLinkActive="active-link" routerLink="/registerbusiness">עסק</a></li>
+                </span>
+                <li><a routerLink="/">בית</a></li>
+            <label for="toggle-btn" class="hide-menu-btn"><i class="fas fa-times">=</i></label>
+        </ul>
+    </nav>
+    
+</header>

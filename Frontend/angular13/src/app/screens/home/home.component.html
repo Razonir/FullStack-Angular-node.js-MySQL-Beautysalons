@@ -1,35 +1,108 @@
-<div class="top">
-    <div class="alert">?</div>
-</div>
-<div *ngIf="userDetails!=null">  
-    <div *ngIf="userDetails.userrole === 'subscriber'">
-      2
-    </div>
-    <div *ngIf="userDetails.userrole === 'admin'">
-      <a></a>
-    </div>
-</div>
-<div class="page">
-    <div class="recommendedCont">
-        <div class="title">מומלצים בשבילך</div>
-        <div class="recommended">
-            <div routerLinkActive="active-link" [routerLink]="['businesspage/',item.bid]" class="card" *ngFor="let item of data">
-                    <div class="bigimg"><img src="../../../assets/blogo.png" alt="{{item.bname}}"></div>
-                    <div class="item"><a class="bname">{{item.bname}} - {{item.bsubject}}</a></div>
-                    <div class="item"><a class="bcity">{{item.bcity}}</a></div>
+<div class="topcard">
+    <app-header></app-header>
+    <div class="topcardcontent">
+        <div class="right">
+            <div class="textBox">
+                <h2>צריך לחשוב<br>על משפט מטורף<br>שיסכם</h2>
+                <p>Sub headline: 4-5 scentence paragraph,</p>
+                <div id="container">
+                    <button class="learn-more"  routerLink="/business">
+                      <span class="circle" aria-hidden="true">
+                        <span class="icon arrow"></span>
+                      </span>
+                      <span class="button-text">חיפוש עסק</span>
+                    </button>
+                </div>       
+            </div>
+        </div>
+        <div class="left">
+            <div class="circle">
+                <img src="/assets/biggirl.png" class="imgOne">
             </div>
         </div>
     </div>
 </div>
-<div class="page">
-    <div class="recommendedCont">
-        <div class="title">מומלצים בשבילך</div>
-        <div class="media-scroller snaps-inline">
-            <div routerLinkActive="active-link" [routerLink]="['businesspage/',item.bid]" class="card" *ngFor="let item of data">
-                <div class="bigimg"><img src="../../../assets/blogo.png" alt="{{item.bname}}"></div>
-                <div class="item"><a class="bname">{{item.bname}} - {{item.bsubject}}</a></div>
-                <div class="item"><a class="bcity">{{item.bcity}}</a></div>
+
+<div class="fullhomepage">
+    <div class="content">
+        <h1>פה יש כמה חרטוטים<br>על כל הקטגוריות </h1>
+        <div class="slider">
+            <div class="card">
+                <img src="/assets/hair.png" alt="">
+                <div class="h1">ספרים</div>
+            </div>
+            <div class="card">
+                <img src="/assets/hair.png" alt="">
+                <div class="h1">ספרים</div>
+            </div>
+            <div class="card">
+                <img src="/assets/hair.png" alt="">
+                <div class="h1">ספרים</div>
+            </div>
+            <div class="card">
+                <img src="/assets/hair.png" alt="">
+                <div class="h1">ספרים</div>
+            </div>
+            <div class="card">
+                <img src="/assets/hair.png" alt="">
+                <div class="h1">ספרים</div>
+            </div>
+        </div>
+    </div>
+    <div class="textimg">
+        <div class="slider">
+            <div class="card">
+                <img src="/assets/biggirl.png" alt="">
+            </div>
+            <div class="card text">
+                <div class="text">
+                    <h1>חרטוטים ועוד חרטוטים ועוד<br>חרטוטים ועוד</h1>
+                    <div class="h1">ספרים</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="boximgtextcolor">
+        <div class="slider">
+            <div class="card text">
+                <div class="text">
+                    <h1>חרטוטים ועוד חרטוטים ועוד<br>חרטוטים ועוד</h1>
+                    <div class="h1">ספרים</div>
+                </div>
+            </div>
+            <div class="card">
+                <img class="one" src="/assets/iphone.png" alt="">
+                <img class="two" src="/assets/iphone.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="textimg">
+        <div class="slider">
+            <div class="card">
+                <img src="/assets/biggirl.png" alt="">
+            </div>
+            <div class="card text">
+                <div class="text">
+                    <h1>חרטוטים ועוד חרטוטים ועוד<br>חרטוטים ועוד</h1>
+                    <div class="h1">ספרים</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="boximgtext">
+        <div class="slider">
+            <div class="card text">
+                <div class="text">
+                    <h1>חרטוטים ועוד חרטוטים ועוד<br>חרטוטים ועוד</h1>
+                    <div class="h1">ספרים</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="/assets/biggirl.png" alt="">
             </div>
         </div>
     </div>
 </div>
+

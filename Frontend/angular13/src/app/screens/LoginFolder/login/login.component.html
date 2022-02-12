@@ -1,17 +1,32 @@
-<div class="formcontainer">
-  <div class="formbody">
-      <form style="width:100%;" [formGroup]="loginForm">
-          <div class="header">התחברות</div>
-          <div>
-                  <input type="text" formControlName="email" matInput placeholder="Username">
-          </div>
-          <div>
-                  <input type="password" formControlName="password" matInput placeholder="Password">
-          </div>
-          <div style="margin-top:40px;">
-              <button class="form-btn" (click)="login()">Sign In</button>
-          </div>
-      </form>
-  </div>
-
+<div class="topcard">
+    <app-header></app-header>
+    <div class="topcardcontent">
+        <div class="right">
+            <div class="formcontainer">
+                <div class="formbody">
+                    <form style="width:100%;" [formGroup]="loginForm">
+                        <div class="header">התחברות</div>
+                        <div>
+                                <input type="text" formControlName="email" matInput placeholder="Username">
+                        </div>
+                        <div>
+                                <input type="password" formControlName="password" matInput placeholder="Password">
+                        </div>
+                        <div style="margin-top:40px;">
+                            <button class="form-btn" (click)="login()">Sign In</button>
+                        </div>
+                    </form>
+                </div>
+              
+              </div>
+              
+              
+              
+        </div>
+        <div class="left">
+            <div class="circle">
+                <img src="/assets/biggirl.png" class="imgOne">
+            </div>
+        </div>
+    </div>
 </div>

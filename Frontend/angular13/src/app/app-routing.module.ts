@@ -6,6 +6,7 @@ import { LoginComponent } from './screens/LoginFolder/login/login.component'
 import { RegisterComponent } from './screens/LoginFolder/register/register.component'
 import { BusinessregisterComponent } from './screens/LoginFolder/businessregister/businessregister.component';
 import { BusinessPageComponent } from './screens/business-page/business-page.component';
+import { BusinessComponent } from './screens/business/business.component';
 import { BackComponent } from './layout/back/back.component';
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
 {path: 'login', component: LoginComponent},
 {path: 'register', component: RegisterComponent},
 {path: 'registerbusiness', component: BusinessregisterComponent},
+{path: 'business', component: BusinessComponent},
 {
   path: 'businesspage',
   children: [

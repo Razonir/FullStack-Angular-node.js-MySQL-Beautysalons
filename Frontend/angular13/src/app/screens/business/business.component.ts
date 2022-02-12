@@ -3,12 +3,11 @@ import { BusinessService } from 'src/app/services/business.service';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  selector: 'app-business',
+  templateUrl: './business.component.html',
+  styleUrls: ['./business.component.scss']
 })
-export class HeaderComponent implements OnInit {
-
+export class BusinessComponent implements OnInit {
 
   userDetails:any
   data:any
@@ -22,18 +21,5 @@ export class HeaderComponent implements OnInit {
     this.businessService.getData().subscribe((data)=>{
       this.data=data
     })
-    
-    
   }
-
-  signout(){
-    return localStorage.clear(),    window.location.reload();
-  }  
-   menuShow() {
-    document.getElementById("menu")?.classList.toggle("show");
-  }
-   menuClose() {
-    document.getElementById("menu")?.classList.remove("show");
-  }
-  
 }

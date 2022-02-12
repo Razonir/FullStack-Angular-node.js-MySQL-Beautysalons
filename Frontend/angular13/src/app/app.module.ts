@@ -17,6 +17,7 @@ import { BusinessregisterComponent } from './screens/LoginFolder/businessregiste
 import { BusinessloginComponent } from './screens/LoginFolder/businesslogin/businesslogin.component';
 import { BusinessPageComponent } from './screens/business-page/business-page.component';
 import { BackComponent } from './layout/back/back.component';
+import { BusinessComponent } from './screens/business/business.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { BackComponent } from './layout/back/back.component';
     BusinessregisterComponent,
     BusinessloginComponent,
     BusinessPageComponent,
-    BackComponent
+    BackComponent,
+    BusinessComponent
   ],
   imports: [
     BrowserModule,

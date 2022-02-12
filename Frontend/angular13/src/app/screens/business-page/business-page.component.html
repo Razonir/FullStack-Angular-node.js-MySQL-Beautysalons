@@ -1,42 +1,31 @@
-
-<div class="page">
-    <div class="business">
-            <div class="card" *ngIf="data as item">
-                <div class="bigimg"><img src="../../../assets/blogo.png" alt="{{item.business[0][0].bname}}"></div>
-                <div class="item"><a class="bname">{{item.business[0][0].bname}}</a></div>
-                <div class="item"><a class="bflname">{{item.business[0][0].bfname}} {{item.business[0][0].blname}}</a></div>
-                <div class="item"><a class="bcity">{{item.business[0][0].bcity}} - {{item.business[0][0].baddress}}</a></div>
-                <div class="item"><a class="bhour">{{item.business[0][0].bhour}}</a></div>
-                <hr>
-                <div class="item"><a class="bdescription">{{item.business[0][0].bdescription}}</a></div>
-                <hr>
-                <div class="book">{{item.business[0][0].bphone}}</div>
-                <h2>שירותים</h2>
-                <div class="item"><a class="bdescription">{{item.business[0][0].bsubject}}</a></div>
-                <h2>גלריה</h2>
-                <div class="smallimg"><img src="../../../assets/blogo.png" alt="{{item.business[0][0].bname}}"><img src="../../../assets/blogo.png" alt="{{item.business[0][0].bname}}"><img src="../../../assets/blogo.png" alt="{{item.business[0][0].bname}}"></div>
-            </div>
+<div class="topcard">
+    <app-header></app-header>
+    <div class="topcardcontent">
+        <div class="right">
+            <div class="textBox">
+                <div class="card" *ngIf="data as item">
+                    <div class="boximgtext">
+                        <div class="slider">
+                            <div class="card text">
+                                <div class="text">
+                                    <div class="item"><a class="bname">{{item.business[0][0].bname}}</a></div>
+                                    <div class="item"><a class="bflname">{{item.business[0][0].bfname}} {{item.business[0][0].blname}}</a></div>
+                                    <div class="item"><a class="bcity">{{item.business[0][0].bcity}} - {{item.business[0][0].baddress}}</a></div>
+                                    <div class="item"><a class="bhour">{{item.business[0][0].bhour}}</a></div>      
+                                    <div class="item"><a class="bdescription">{{item.business[0][0].bdescription}}</a></div>
+                                    <div class="book">{{item.business[0][0].bphone}}</div>
+    
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="/assets/blogo.png" alt="{{item.business[0][0].bname}}">
+                            </div>
+                        </div>
+                    </div>
     </div>
 </div>
-
-
-<div class="app">
+<div class="page">
     <div class="business">
-            <div class="card" *ngIf="data as item">
-                <div class="bigimg"><img src="../../../assets/blogo.png" alt="{{item.business[0][0].bname}}"></div>
-                <div class="item"><a class="bname">{{item.business[0][0].bname}}</a></div>
-                <div class="item"><a class="bflname">{{item.business[0][0].bfname}} {{item.business[0][0].blname}}</a></div>
-                <div class="item"><a class="bcity">{{item.business[0][0].bcity}} - {{item.business[0][0].baddress}}</a></div>
-                <div class="item"><a class="bhour">{{item.business[0][0].bhour}}</a></div>
-                <hr>
-                <div class="item"><a class="bdescription">{{item.business[0][0].bdescription}}</a></div>
-                <hr>
-                <div class="book">{{item.business[0][0].bphone}}</div>
-                <h2>שירותים</h2>
-                <div class="item"><a class="bdescription">{{item.business[0][0].bsubject}}</a></div>
-            
-                <h2>גלריה</h2>
-                <div class="smallimg"><img src="../../../assets/blogo.png" alt="{{item.business[0][0].bname}}"><img src="../../../assets/blogo.png" alt="{{item.business[0][0].bname}}"><img src="../../../assets/blogo.png" alt="{{item.business[0][0].bname}}"></div>
-            </div>
+
     </div>
 </div>
