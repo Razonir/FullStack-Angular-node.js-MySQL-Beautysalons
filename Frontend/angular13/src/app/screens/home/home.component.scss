@@ -57,104 +57,37 @@
     }
 }
 
-button {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    margin-top: 100px;
-    outline: none;
-    border: 0;
-    vertical-align: middle;
+.button{
+    display: flex;
+    width: 100px;
+    padding: 10px 20px;
     text-decoration: none;
-    background: transparent;
-    padding: 0;
-    font-size: inherit;
-    font-family: inherit;
-    &.learn-more {
-      width: 20rem;
-      box-shadow: 0px 5px 21px -11px #5426ff;
-      background-color: #dfd8fc;
-      border-radius: 100px;
-      padding: 20px;
-      height: auto;
-      .circle {
-        position: relative;
-        display: block;
-        margin: 0;
-        width: 4rem;
-        height: 4rem;        
-        transition: 0.5s;
-        background: #6946ec;
-        transition: 0.5s;
-        border-radius: 3.625rem;
-        .icon {
-          position: absolute;
-          top: 0;
-          bottom: 0;        
-          background-color: red;
-          animation: mymove 0.4s infinite;
-          animation-direction: alternate;
-          transition: 0.5s;
-          animation-timing-function: ease-in-out;
-          -webkit-animation-timing-function: ease-in-out;
-          margin: auto;
-          background-color:black;
-          &.arrow {
-            left: 0.2rem;       
-            transition: 0.5s;
-            transform: rotate(180deg);
-            width: 0;
-            height: 0.3rem;
-            background: none;
-            &::before {
-              position: absolute;
-              content: "";
-              top: -0.4rem;
-              right: 0.8625rem;        
-              transition: 0.5s;
-              width: 1rem;
-              height: 1rem;
-              border-top: 0.3rem solid white;
-              border-right: 0.3rem solid white;
-              transform: rotate(45deg);
-            }
-          }
-        }
-      }
-      @keyframes mymove {
-        from {left: 0.9rem;}
-        to {left: 0.4rem;}
-      }
-      .button-text {
-        position: absolute;
-        top: 17px;
-        right: 100px;
-        bottom: 0;        
-        transition: 0.5s;
-        padding: 0.75rem 0;
-        margin: 0 0 0 1.85rem;
-        color: #6946ec;
-        font-weight: 700;
-        font-size: 27px;
-        line-height: 1.6;
-        text-align: center;
-        text-transform: uppercase;
-
-      }
-    }
-    &:hover {
-      .circle {
-        width: 100%;
-        .icon {
-          &.arrow {
-            background: black;
-            transform: translate(3rem, 0);
-          }
-        }
-      }
-      .button-text {
+    transition: 0.5s;
+    background-color: #6946ec;
+    border-radius: 28px;
+    .text{
+        width: 80%;
         color: white;
-      }
+        text-align: center;
+    }
+    .arrow{
+        display: flex;
+        overflow: hidden;
+        -webkit-filter: invert(100%);
+        transition: 0.5s;
+        width: 20%;
+        transform: rotate(180deg) translateY(0px);
+        flex-grow: 1;
+        .first,.sec{
+            transition: 0.2s;
+        }
+    }
+    &:hover{
+        background: #3e2a85;
+        .first,.sec{
+            transform: translateX(15px);
+        }
+        
     }
 }
 
