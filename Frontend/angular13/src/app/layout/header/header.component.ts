@@ -14,7 +14,6 @@ export class HeaderComponent implements OnInit {
   data:any
   constructor(private businessService:BusinessService,private userService:UserService){}
   ngOnInit(){
-    console.log(localStorage.getItem("uid"));
     let uid = localStorage.getItem("uid");
     this.userService.getUserDetails(uid).subscribe((data)=>{
       this.userDetails = data.userDetails;
@@ -22,8 +21,6 @@ export class HeaderComponent implements OnInit {
     this.businessService.getData().subscribe((data)=>{
       this.data=data
     })
-    
-    
   }
 
   signout(){

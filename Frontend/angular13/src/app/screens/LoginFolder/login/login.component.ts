@@ -4,6 +4,7 @@ import { User } from '../../../model/user';
 import { AbstractControl, FormGroup, FormControl, Validators } from '@angular/forms';
 
 import { UserService } from 'src/app/services/user.service';
+import { BusinessService } from 'src/app/services/business.service';
 
 @Component({
   selector: 'app-login',
@@ -12,8 +13,12 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class LoginComponent implements OnInit {
 
+  userDetails:any
+  data:any
   loginForm: FormGroup;
-  constructor(private userService: UserService,
+  
+  constructor(private businessService:BusinessService,
+    private userService: UserService,
     private router: Router,
     private _activatedRoute: ActivatedRoute) {
     this.loginForm = new FormGroup({
@@ -22,10 +27,17 @@ export class LoginComponent implements OnInit {
     });
     }  
   ngOnInit(): void {
+    let uid = localStorage.getItem("uid");
+    this.userService.getUserDetails(uid).subscribe((data)=>{
+      this.userDetails = data.userDetails;
+    });
+    this.businessService.getData().subscribe((data)=>{
+      this.data=data
+    })
   }
   goToHome(){
-    this.router.navigate(['']);
-  }
+    window.location.href = "http://localhost:4200/";
+    }
  
   login() {
     console.log(this.loginForm.value);
@@ -37,8 +49,7 @@ export class LoginComponent implements OnInit {
             console.log(data.token);
             localStorage.setItem("uid",data.uid);
             localStorage.setItem('token', data.token);
-            window.location.reload();
-            this.router.navigate(['/']);
+            this.goToHome();            
           },
           error => { }
         );

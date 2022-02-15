@@ -1,9 +1,10 @@
 .topcard{
     padding: 0 4%;
     border-radius: 0 0 28px 28px ;
-    background-color: #fff;
+    background-color: white;
     box-shadow: 0px 5px 30px 10px #d5d3e08c;
 }
+
 .topcardcontent{
     display: flex;
     width: 100%;
@@ -90,11 +91,15 @@
         
     }
 }
+.button.top{
+    margin-top: 100px;
+}
 
 .fullhomepage{
     padding: 20px 4%;
     .content{
         margin-top: 150px; 
+        margin-bottom: 50px;
         text-align:center;
         h1{
             font-size: 40px;
@@ -112,21 +117,27 @@
             
             .card{
                 background: white;
+                transition: 0.5s;
                 width: 100%;
+                cursor: pointer;
                 max-width: 300px;
                 border-radius: 28px;
                 padding:10px;
-                box-shadow: 0px 5px 30px 10px #d5d3e02c;
                 h1{
                 }
                 img{
                     width: 100px;
                 }
+                &:hover{
+                    transform: translateY(-20px);
+                    box-shadow:0 30px 20px -20px #0000005b
+                }
             }
+
         }
     }
     .textimg{
-        margin-top: 150px; 
+        margin-top: 230px; 
         text-align:center;
         
         h1{
@@ -167,6 +178,7 @@
         text-align:center;
         background: white;
         padding: 0 4%;
+        transition: 1s;
         border-radius: 28px;
         background-color: #fff;
         box-shadow: 0px 5px 30px 10px #d5d3e08c;
@@ -189,7 +201,11 @@
                 margin: auto 0;
                 img{
                     width: 300px;
-                    transform: scale(1.2);
+                    transition: 0.2s;
+                }
+                .bigimg{
+                    transition: 1s !important;
+                    transform: scale(1.2)
                 }
                 .text{
                     text-align:right;
@@ -200,9 +216,18 @@
                 justify-content: flex-start !important;
             }
         }
+        &:hover{
+            transform: scale(0.95);
+            .bigimg{
+                    transform: scale(1.2) translateX(-150px) !important;
+                
+            }
+        }
     }
     .boximgtextcolor{
-        margin-top: 150px; 
+        margin-top: 200px; 
+        color: white;
+        transition: 1s;
         text-align:center;
         height: 440px;
         background: white;
@@ -210,8 +235,18 @@
         border-radius: 28px;
         background-image: linear-gradient(45deg, #6946ec, #6946ece6);
         box-shadow: 0px 5px 30px 10px #d5d3e08c;
+        &:hover{
+            transform: scale(0.97);
+            img.one{
+                transform: translateY(131px);
+            }
+            img.two{
+                transform: translateY(-131px);
+            }
+        }
         h1{
             font-size: 40px;
+        
         }
         .slider{
             margin-top:50px;
@@ -236,9 +271,13 @@
                 }
                 img.one{
                     margin-top: -120px !important;
+                    transition: 1s;
+
                 }
                 img.two{
                     margin-bottom: -130px !important; 
+                    transition: 1s;
+
                 }
             }
             .card text{
@@ -248,4 +287,5 @@
         }
     }
 }
+
 

@@ -2,26 +2,27 @@
     <app-header></app-header>
     <div class="topcardcontent">
         <div class="right">
-            <div class="formcontainer">
-                <div class="formbody">
-                    <form style="width:100%;" [formGroup]="loginForm">
-                        <div class="header">התחברות</div>
-                        <div>
-                                <input type="text" formControlName="email" matInput placeholder="Username">
-                        </div>
-                        <div>
-                                <input type="password" formControlName="password" matInput placeholder="Password">
-                        </div>
-                        <div style="margin-top:40px;">
-                            <button class="form-btn" (click)="login()">Sign In</button>
-                        </div>
-                    </form>
+            <span *ngIf="userDetails!=null">
+                <div class="login"><h2>דף זה אינו זמין עבורך<br>אתה כבר מחובר לאתר</h2></div>
+            </span>
+            <span *ngIf="userDetails==null"> 
+                <div class="formcontainer">
+                    <div class="formbody">
+                        <form style="width:100%;" [formGroup]="loginForm">
+                            <div class="header">התחברות</div>
+                            <div>
+                                    <input type="text" formControlName="email" matInput placeholder="Username">
+                            </div>
+                            <div>
+                                    <input type="password" formControlName="password" matInput placeholder="Password">
+                            </div>
+                            <div style="margin-top:40px;">
+                                <button class="form-btn" (click)="login()">התחבר</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-              
-              </div>
-              
-              
-              
+            </span>
         </div>
         <div class="left">
             <div class="circle">
