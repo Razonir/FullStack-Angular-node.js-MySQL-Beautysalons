@@ -1,3 +1,9 @@
+div{
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+}
+
 .topcard{
     padding: 0 4%;
     border-radius: 0 0 28px 28px ;
@@ -58,20 +64,20 @@
     }
 }
 
-.button{
+.buttonR{
     display: flex;
-    width: 100px;
+    width: 150px;
     padding: 10px 20px;
     text-decoration: none;
     transition: 0.5s;
     background-color: #6946ec;
     border-radius: 28px;
-    .text{
+    .textR{
         width: 80%;
         color: white;
         text-align: center;
     }
-    .arrow{
+    .arrowR{
         display: flex;
         overflow: hidden;
         -webkit-filter: invert(100%);
@@ -79,14 +85,14 @@
         width: 20%;
         transform: rotate(180deg) translateY(0px);
         flex-grow: 1;
-        .first,.sec{
+        .firstR,.secR{
             transition: 0.2s;
         }
     }
     &:hover{
         background: #3e2a85;
-        .first,.sec{
-            transform: translateX(15px);
+        .firstR,.secR{
+            transform: translateX(25px);
         }
         
     }
@@ -115,7 +121,7 @@
 
             justify-items: center;
             
-            .card{
+            .cardR{
                 background: white;
                 transition: 0.5s;
                 width: 100%;
@@ -153,7 +159,7 @@
             padding: 0 4%;
 
             
-            .card{
+            .cardR{
                 width: 100%;
                 border-radius: 28px;
                 padding:10px;
@@ -193,7 +199,7 @@
             grid-auto-rows: auto;
             justify-items: center;
             
-            .card{
+            .cardR{
                 width: 100%;
                 border-radius: 28px;
                 padding:10px;
@@ -256,7 +262,7 @@
             grid-auto-rows: auto;
             justify-items: center;
             
-            .card{
+            .cardR{
                 width: 100%;
                 border-radius: 28px;
                 padding:10px;

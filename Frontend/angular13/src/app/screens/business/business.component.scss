@@ -120,7 +120,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    .card{
+    .cardR{
         width: 270px;
         padding: 10px;
         background: rgb(255, 255, 255);
@@ -128,6 +128,7 @@
         box-shadow: 0px 5px 10px #42454610;
         color: #454d7d;
         margin: 10px 25px;
+        
         transition: 0.5s;
         img{
             width: 100%;
@@ -135,8 +136,15 @@
             height: 100px;
 
         }
-        .item{
+        
+        .itemR{
             font-size: 17px;
+            padding: 0;
+            margin: 0; 
+            a{
+                color: #090d20;
+                text-decoration: none;
+            }
             .bname{
                 font-weight: bolder;
             }

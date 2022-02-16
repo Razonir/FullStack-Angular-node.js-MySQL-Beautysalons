@@ -4,31 +4,182 @@
         <div class="right">
             <hr>
             <div class="textBox">
-                <div class="card">
+                <div class="cardR">
                     <div class="boximgtext">
                         <div class="slider">
-                            <div class="card text">
-                                <div class="text">
-                                    <div class="item"><a class="bname">{{item.business[0][0].bname}}</a></div>
-                                    <div class="item"><a class="bflname">{{item.business[0][0].bfname}} {{item.business[0][0].blname}}</a></div>
-                                    <div class="item"><a class="bcity">{{item.business[0][0].bcity}} - {{item.business[0][0].baddress}}</a></div>
-                                    <div class="item"><a class="bdescription">{{item.business[0][0].bdescription}}</a></div>
-                                    <div class="item"><a class="bhour">{{item.business[0][0].bhour}}</a></div>      
+                            <div class="cardR text">
+                                <div class="textR">
+                                    <div class="smallimg"><img src="/assets/blogo.png" alt="{{item.business[0][0].bname}}"></div>
+                                    <div class="details">
+                                        <div class="item"><a class="bname">{{item.business[0][0].bname}}</a></div>
+                                        <div class="item"><a class="bflname">{{item.business[0][0].bfname}} {{item.business[0][0].blname}}</a></div>
+                                    </div>
                                 </div>
+                                <div class="item"><a class="bdescription">{{item.business[0][0].bdescription}} - {{item.business[0][0].bdescription}} - {{item.business[0][0].bdescription}} - {{item.business[0][0].bdescription}} - {{item.business[0][0].bdescription}} - {{item.business[0][0].bdescription}} - {{item.business[0][0].bdescription}}</a></div>
                             </div>
-                            <div class="card">
-                                <img src="/assets/blogo.png" alt="{{item.business[0][0].bname}}">
+                            <div class="cardR">
+                                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-indicators">
+                                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        </div>
+                                        <div class="carousel-inner">
+                                          <div class="carousel-item active">
+                                            <img src="/assets/blogo.png" class="d-block w-100" alt="...">
+                                          </div>
+                                          <div class="carousel-item">
+                                            <img src="/assets/blogo.png" class="d-block w-100" alt="...">
+                                          </div>
+                                          <div class="carousel-item">
+                                            <img src="/assets/blogo.png" class="d-block w-100" alt="...">
+                                          </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                          <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                          <span class="visually-hidden">Next</span>
+                                        </button>
+                                      </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <a  href="tel:{{item.business[0][0].bphone}}" class="book">לחץ כדי להתקשר</a>
+            <hr>
+            <div class="contact">
+                <div class="colRR">
+                    <h5>דברו איתנו<br><span>{{item.business[0][0].bphone}}</span></h5>
+                </div>
+                <div class="colRR">
+                    <h5>שעות קבלה<br><span>{{item.business[0][0].bhour}}</span></h5>
+                </div>
+                <div class="colRR">
+                    <h5>בקרו אותנו<br><span>{{item.business[0][0].bcity}} - {{item.business[0][0].baddress}}</span></h5>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 <div class="page" *ngIf="data as item">
     <div class="business">
-
+        <div class="textimg">
+            <div class="slider">
+                <div class="cardR textR">
+                    <div class="textR">
+                        <h1>חרטוטים ועוד חרטוטים ועוד<br>חרטוטים ועוד</h1>
+                        <div class="h1">חרטוטים ועוד חרטוטים ועוד
+                            חרטוטים ועודחרטוטים ועוד חרטוטים ועוד
+                            חרטוטים ועודחרטוטים ועוד חרטוטים ועוד
+                            חרטוטים ועודחרטוטים ועוד חרטוטים ועוד
+                            חרטוטים ועודחרטוטים ועוד חרטוטים ועוד
+                            חרטוטים ועודחרטוטים ועוד חרטוטים ועוד
+                            חרטוטים ועודחרטוטים<br><br> ועוד חרטוטים ועוד
+                            חרטוטים ועודחרטוטים ועוד חרטוטים ועוד
+                            חרטוטים ועודחרטוטים ועוד חרטוטים ועוד
+                            חרטוטים ועודחרטוטים ועוד חרטוטים ועוד
+                            חרטוטים ועודחרטוטים ועוד חרטוטים ועוד
+                            חרטוטים ועודחרטוטים ועוד חרטוטים ועוד
+                            חרטוטים ועודחרטוטים ועוד חרטוטים ועוד
+                            חרטוטים ועודחרטוטים ועוד חרטוטים ועוד
+                            חרטוטים ועודחרטוטים ועוד חרטוטים ועוד
+                            חרטוטים ועודחרטוטים ועוד חרטוטים ועוד
+                            חרטוטים ועוד</div>  
+                                                    
+                    </div>
+                </div>
+                <div class="cardR">
+                    <img src="/assets/blogo.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+              <div class="col-sm-5 col-md-6">
+                <ul class=leaders>
+                    <h2>מחירון</h2>
+                    <li>
+                      <span>שירות</span>
+                      <span>108.95</span>
+                    </li>
+                    <li>
+                        <span>שירות</span>
+                        <span>108.95</span>
+                      </li>
+                      <li>
+                        <span>שירות</span>
+                        <span>108.95</span>
+                      </li>
+                      <li>
+                        <span>שירות</span>
+                        <span>108.95</span>
+                      </li>
+                      <li>
+                        <span>שירות</span>
+                        <span>108.95</span>
+                      </li>
+                      <li>
+                        <span>שירות</span>
+                        <span>108.95</span>
+                      </li>
+                      <li>
+                        <span>שירות</span>
+                        <span>108.95</span>
+                      </li>
+                      <li>
+                        <span>שירות</span>
+                        <span>108.95</span>
+                      </li>
+                      <li>
+                        <span>שירות</span>
+                        <span>108.95</span>
+                      </li>
+                      <li>
+                        <span>שירות</span>
+                        <span>108.95</span>
+                      </li>
+                      <li>
+                        <span>שירות</span>
+                        <span>108.95</span>
+                      </li>
+                      <li>
+                        <span>שירות</span>
+                        <span>108.95</span>
+                      </li>
+                  </ul>
+              </div>
+              <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
+                <div class="textR">
+                    <h1>חרטוטים ועוד חרטוטים ועוד<br>חרטוטים ועוד</h1>
+                    <div class="h1">חרטוטים ועוד חרטוטים ועוד
+                        חרטוטים ועודחרטוטים ועוד חרטוטים ועוד
+                        חרטוטים ועודחרטוטים ועוד חרטוטים ועוד
+                        חרטוטים ועודחרטוטים ועוד חרטוטים ועוד
+                        חרטוטים ועודחרטוטים ועוד חרטוטים ועוד
+                        חרטוטים ועודחרטוטים ועוד חרטוטים ועוד
+                        חרטוטים ועודחרטוטים<br><br> ועוד חרטוטים ועוד
+                        חרטוטים ועודחרטוטים ועוד חרטוטים ועוד
+                        חרטוטים ועודחרטוטים ועוד חרטוטים ועוד
+                        חרטוטים ועודחרטוטים ועוד חרטוטים ועוד
+                        חרטוטים ועודחרטוטים ועוד חרטוטים ועוד
+                        חרטוטים ועודחרטוטים ועוד חרטוטים ועוד
+                        חרטוטים ועודחרטוטים ועוד חרטוטים ועוד
+                        חרטוטים ועודחרטוטים ועוד חרטוטים ועוד
+                        חרטוטים ועודחרטוטים ועוד חרטוטים ועוד
+                        חרטוטים ועודחרטוטים ועוד חרטוטים ועוד
+                        חרטוטים ועוד</div>                          
+                    </div>
+                </div>            
+            </div>
+        </div>
+    </div>
+    <div class="gallery">
+        <img src="/assets/blogo.png"  alt="Cinque Terre" >      
+        <img src="/assets/blogo.png"  alt="Forest">      
+        <img src="/assets/blogo.png"  alt="Northern Lights" >
+        <img src="/assets/blogo.png" alt="Mountains" >
     </div>
 </div>

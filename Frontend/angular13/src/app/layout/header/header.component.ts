@@ -24,7 +24,7 @@ export class HeaderComponent implements OnInit {
   }
 
   signout(){
-    return localStorage.clear(),    window.location.reload();
+    return localStorage.clear(),    this.goToHome();
   }  
    menuShow() {
     document.getElementById("menu")?.classList.toggle("show");
@@ -32,5 +32,7 @@ export class HeaderComponent implements OnInit {
    menuClose() {
     document.getElementById("menu")?.classList.remove("show");
   }
-  
+  goToHome(){
+    window.location.href = "http://localhost:4200/";
+    }
 }

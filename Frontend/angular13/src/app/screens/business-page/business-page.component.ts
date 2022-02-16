@@ -17,6 +17,9 @@ export class BusinessPageComponent implements OnInit {
     const id = +this.route.snapshot.params['bid'];
     this.businessService.getOne(id).subscribe((data)=>{
       this.data=data
+
+      
     })
   }
+  
 }
