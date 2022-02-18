@@ -12,9 +12,12 @@ export class BusinessregisterComponent implements OnInit {
 
   business : Business = new Business();
 
+
   constructor(private businessService: BusinessService,  private router: Router) { }
+  name= "cs";
 
   ngOnInit(): void {
+    
   }
   goToHome(){
     this.router.navigate(['']);

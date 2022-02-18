@@ -4,8 +4,10 @@
       <div class="right">
         <form (ngSubmit) = "onSubmit()">
           <h1 class="form-title">הרשמה</h1>
-        <div class="form-body">
-            <div class="form-group">
+        <div class="form-body ">
+          <div class="row">
+
+            <div class="form-group col-md-6">
                 <input
                   type="text"
                   id="bfname"
@@ -16,8 +18,8 @@
                 />
                 <label for="bfname">שם פרטי</label>
               </div>
-              <div class="form-group">
-                  <input
+              <div class="form-group col-md-6">
+                <input
                     type="text"
                     id="blname"
                     name="blname"
@@ -27,7 +29,7 @@
                   />
                   <label for="blname">שם משפחה</label>
                 </div>
-                <div class="form-group">
+                <div class="form-group col-md-6">
                   <input
                     type="text"
                     id="bname"
@@ -38,8 +40,8 @@
                   />
                   <label for="bname">שם עסק</label>
                 </div>
-          <div class="form-group">
-            <input
+                <div class="form-group col-md-6">
+                  <input
               type="email"
               id="bemail"
               name="bemail"
@@ -50,7 +52,7 @@
             />
             <label for="bemail">אימייל</label>
           </div>
-          <div class="form-group">
+          <div class="form-group col-md-6">
             <input
               type="password"
               id="bpassword"
@@ -61,18 +63,8 @@
             />
             <label for="bpassword">סיסמא</label>
           </div>
-          <div class="form-group">
-            <input
-              type="text"
-              id="bdescription"
-              name="bdescription"
-              class="form-input"
-              placeholder=" "
-              [(ngModel)]="business.bdescription"
-            />
-            <label for="bdescription">תיאור</label>
-          </div>
-          <div class="form-group">
+
+          <div class="form-group col-md-6">
             <input
               type="text"
               id="bcity"
@@ -83,7 +75,7 @@
             />
             <label for="bcity">עיר</label>
           </div>
-          <div class="form-group">
+          <div class="form-group col-md-6">
             <input
               type="text"
               id="baddress"
@@ -94,8 +86,8 @@
             />
             <label for="baddress">כתובת</label>
           </div>
-          <div class="form-group">
-              <input
+          <div class="form-group col-md-6">
+            <input
                 type="text"
                 id="bphone"
                 name="bphone"
@@ -105,7 +97,7 @@
               />
               <label for="bphone">פלאפון</label>
             </div>
-            <div class="form-group">
+            <div class="form-group col-md-6">
               <input
                 type="text"
                 id="bsubject"
@@ -116,8 +108,19 @@
               />
               <label for="bsubject">תחום</label>
             </div>
-            <div class="form-group">
-            <input
+            <div class="form-group col-md-6">
+              <input
+                type="text"
+                id="bhour"
+                name="bhour"
+                class="form-input"
+                placeholder=" "
+                [(ngModel)]="business.bhour"
+              />
+              <label for="bhour">שעות קבלה</label>
+            </div>
+            <div class="form-group col-md-6">
+              <input
             type="text"
             id="blogo"
             name="blogo"
@@ -127,6 +130,14 @@
           />
           <label for="blogo">לוגו</label>
         </div>
+        <textarea
+        type="text"
+        id="bdescription"
+        name="bdescription"
+        class="form-input"
+        placeholder="תיאור ראשי"
+        [(ngModel)]="business.bdescription"
+      ></textarea>
           <div class="wrap">
             <button type="submit"  class="form-btn button">הירשם</button>
           </div>
@@ -134,13 +145,163 @@
             <a href="#">רשום כעסק? התחבר</a>
           </div>
         </div>
+        </div>
       </form>
       
       </div>
       <div class="left">
-          <div class="circle">
-              <img src="/assets/biggirl.png" class="imgOne">
+        <div class="topcard">
+          <div class="topcardcontent">
+              <div class="right">
+                  <div class="textBox">
+                      <div class="cardR">
+                          <div class="boximgtext">
+                              <div class="slider">
+                                  <div class="cardR text">
+                                      <div class="textR">
+                                          <div class="smallimg"><img src="/assets/blogo.png" alt=""></div>
+                                          <div class="details">
+                                            <div class="item"><a class="bname">{{business.bname}}</a></div>
+                                            <div class="item"><a class="bflname">{{business.bfname}} {{business.blname}}</a></div>
+                                            <div class="item"><a class="bsubject">{{business.bsubject}}</a></div>
+
+                                          </div>
+                                      </div>
+                                      <div class="item"><a class="bdescription">{{business.bdescription}}</a></div>
+                                  </div>
+                                  <div class="cardR">
+                                          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                                              <div class="carousel-indicators">
+                                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                              </div>
+                                              <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                  <img src="/assets/blogo.png" class="d-block w-100" alt="...">
+                                                </div>
+                                                <div class="carousel-item">
+                                                  <img src="/assets/blogo.png" class="d-block w-100" alt="...">
+                                                </div>
+                                                <div class="carousel-item">
+                                                  <img src="/assets/blogo.png" class="d-block w-100" alt="...">
+                                                </div>
+                                              </div>
+                                              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                              </button>
+                                              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Next</span>
+                                              </button>
+                                            </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <hr>
+                  <div class="contact">
+                      <div class="colRR">
+                          <h5>דברו איתנו<br><span>{{business.bphone}}</span></h5>
+                      </div>
+                      <div class="colRR">
+                          <h5>שעות קבלה<br><span>{{business.bhour}}</span></h5>
+                      </div>
+                      <div class="colRR">
+                          <h5>בקרו אותנו<br><span>{{business.bcity}} - {{business.baddress}}</span></h5>
+                      </div>
+                  </div>
+              </div>
           </div>
+      </div>
+      <div class="page">
+          <div class="business">
+              <div class="textimg">
+                  <div class="slider">
+                      <div class="cardR textR">
+                          <div class="textR">
+                              <div class="h1">תיאור</div>  
+                                                          
+                          </div>
+                      </div>
+                      <div class="cardR">
+                          <img src="/assets/blogo.png" alt="">
+                      </div>
+                  </div>
+              </div>
+              <div class="container">
+                  <div class="row">
+                    <div class="col-sm-5 col-md-6">
+                      <ul class=leaders>
+                          <h2>מחירון</h2>
+                          <li>
+                            <span>שירות</span>
+                            <span>108.95</span>
+                          </li>
+                          <li>
+                              <span>שירות</span>
+                              <span>108.95</span>
+                            </li>
+                            <li>
+                              <span>שירות</span>
+                              <span>108.95</span>
+                            </li>
+                            <li>
+                              <span>שירות</span>
+                              <span>108.95</span>
+                            </li>
+                            <li>
+                              <span>שירות</span>
+                              <span>108.95</span>
+                            </li>
+                            <li>
+                              <span>שירות</span>
+                              <span>108.95</span>
+                            </li>
+                            <li>
+                              <span>שירות</span>
+                              <span>108.95</span>
+                            </li>
+                            <li>
+                              <span>שירות</span>
+                              <span>108.95</span>
+                            </li>
+                            <li>
+                              <span>שירות</span>
+                              <span>108.95</span>
+                            </li>
+                            <li>
+                              <span>שירות</span>
+                              <span>108.95</span>
+                            </li>
+                            <li>
+                              <span>שירות</span>
+                              <span>108.95</span>
+                            </li>
+                            <li>
+                              <span>שירות</span>
+                              <span>108.95</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
+                      <div class="textR">
+                        <div class="h1">תיאור</div>  
+
+                      </div>            
+                  </div>
+              </div>
+          </div>
+          <div class="gallery">
+              <img src="/assets/blogo.png"  alt="Cinque Terre" >      
+              <img src="/assets/blogo.png"  alt="Forest">      
+              <img src="/assets/blogo.png"  alt="Northern Lights" >
+              <img src="/assets/blogo.png" alt="Mountains" >
+          </div>
+      </div>
+      
       </div>
   </div>
 </div>

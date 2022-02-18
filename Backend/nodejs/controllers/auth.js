@@ -113,6 +113,7 @@ exports.signupbusiness = async (req, res, next) => {
   const bphone = req.body.bphone;
   const bsubject = req.body.bsubject;
   const blogo = req.body.blogo;
+  const bhour = req.body.bhour;
 
 
   try {
@@ -129,7 +130,8 @@ exports.signupbusiness = async (req, res, next) => {
       baddress: baddress,
       bphone: bphone,
       bsubject: bsubject,
-      blogo: blogo
+      blogo: blogo,
+      bhour: bhour
     };
 
     const result = await Business.save(businessDetails);

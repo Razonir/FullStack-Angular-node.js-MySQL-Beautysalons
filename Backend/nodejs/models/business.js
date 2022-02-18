@@ -1,7 +1,7 @@
 const db = require('../util/database');
 
 module.exports = class Business {
-  constructor(bid,bfname,blname, bname, bdescription,bemail,bpassword,bcity,baddress,bphone,bsubject,blogo) {
+  constructor(bid,bfname,blname, bname, bdescription,bemail,bpassword,bcity,baddress,bphone,bsubject,blogo,bhour) {
     this.bid = bid;
     this.bfname = bfname;
     this.blname = blname;
@@ -14,6 +14,8 @@ module.exports = class Business {
     this.bphone = bphone;
     this.bsubject = bsubject;
     this.blogo = blogo;
+    this.bhour = bhour;
+
   }
 
   static fetchAll() {
@@ -30,8 +32,8 @@ module.exports = class Business {
 
   static save(business) {
     return db.execute(
-      'insert into Business (bfname,blname,bname,bdescription,bemail,bpassword,bcity,baddress,bphone,bsubject,blogo) VALUES (?, ?, ?, ?, ? ,? ,? ,? ,? ,? ,?)',
-      [business.bfname,business.blname,business.bname,business.bdescription,business.bemail,business.bpassword,business.bcity,business.baddress,business.bphone,business.bsubject,business.blogo]
+      'insert into Business (bfname,blname,bname,bdescription,bemail,bpassword,bcity,baddress,bphone,bsubject,blogo,bhour) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)',
+      [business.bfname,business.blname,business.bname,business.bdescription,business.bemail,business.bpassword,business.bcity,business.baddress,business.bphone,business.bsubject,business.blogo,business.bhour]
     );
   }
 };

@@ -54,6 +54,7 @@ router.post(
       body('bphone').trim().not().isEmpty(),
       body('bsubject').trim().not().isEmpty(),
       body('blogo').trim().not().isEmpty(),
+      body('bhour').trim().not().isEmpty(),
     ],
   authController.signupbusiness
 );
