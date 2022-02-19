@@ -295,3 +295,67 @@ div{
 }
 
 
+@media only screen and (max-width: 600px) {
+    .show-menu-btn{
+        padding: 0;
+    }
+    .topcardcontent {
+        .right{
+            .textBox{
+                p{
+                    font-size: 16px;
+                }
+                h2{
+                    font-size: 20px;
+                    font-weight: bolder;
+                }
+            }
+        }
+    }
+    .fullhomepage{
+        padding: 0;
+        margin: 0;
+        .content{
+            padding: 0;
+            margin: 10px 0;
+            h1{
+                font-size: 0;
+            }
+            .slider{
+                margin: 0;
+                grid-template-columns: repeat(2, 1fr);
+                padding: 0;
+                grid-gap: 1rem;
+            }
+        }
+        .boximgtextcolor{
+            display: none;
+        }
+        .textimg{
+            margin-top: 0;
+
+            .slider{
+                display: inherit;
+                .cardR{
+                    display: none;
+                }
+            }
+        }
+        .boximgtext{
+            width: 100%;
+            margin-bottom: 100px;
+            margin-top: 10px;
+            .slider{
+                display: flow-root;
+
+            }
+            img{
+                display: none;
+            }
+            &:hover{
+                transform: scale(1);
+
+        }
+        }
+    }
+}
