@@ -13,11 +13,11 @@ The goal is to advertise small home businesses and let them advertise without in
 - JavaScript
 - SQL
 
-## framework
+## Framework
 - Angular
 - Node.js
 
-## Data Bases
+## Databases
 - MySQL
 
 ## Some pictures from the project
