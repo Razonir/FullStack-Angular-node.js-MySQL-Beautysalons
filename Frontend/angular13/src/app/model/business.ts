@@ -4,6 +4,8 @@ export class Business {
     blname?: String;
     bname?: String;
     bdescription?: String;
+    bdescriptionf?: String;
+    bdescriptions?: String;
     bemail?: String;
     bpassword?: String;
     bgender?: String;

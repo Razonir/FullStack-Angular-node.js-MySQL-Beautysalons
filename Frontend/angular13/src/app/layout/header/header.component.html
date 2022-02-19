@@ -11,13 +11,15 @@
 
     <nav>
         <ul class="navigation">
-            <li><a routerLinkActive="active-link" routerLink="/CryptoComponent">קריפטו</a></li>
-            <li><span *ngIf="userDetails!=null"><a routerLink="/" (click)="signout()">התנתק</a></span></li>
-                <span *ngIf="userDetails==null"> 
-                    <li><a routerLinkActive="active-link" routerLink="/login">התחברות</a></li>
-                        <li><a routerLinkActive="active-link" routerLink="/register">הרשמה</a></li>
-                            <li> <a routerLinkActive="active-link" routerLink="/registerbusiness">עסק</a></li>
+            <span *ngIf="userDetails!=null">
+                    <li><a routerLink="/" (click)="signout()">התנתק</a></li>
+                    <li><span  *ngIf="userDetails.userrole === 'admin'"><a routerLinkActive="active-link" routerLink="/admin">ממשק ניהול</a></span></li>
                 </span>
+                     <span *ngIf="userDetails==null"> 
+                            <li><a routerLinkActive="active-link" routerLink="/login">התחברות</a></li>
+                            <li><a routerLinkActive="active-link" routerLink="/register">הרשמה</a></li>
+                            <li> <a routerLinkActive="active-link" routerLink="/registerbusiness">עסק</a></li>
+                    </span>
                 <li><a routerLink="/">בית</a></li>
             <label for="toggle-btn" class="hide-menu-btn"><i class="fas fa-times">=</i></label>
         </ul>

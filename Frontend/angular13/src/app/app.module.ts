@@ -9,7 +9,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { BodyComponent } from './layout/body/body.component';
 import { FooterComponent } from './layout/footer/footer.component';
-import { CryptoComponent } from './screens/crypto/crypto.component';
 import { HomeComponent } from './screens/home/home.component';
 import { LoginComponent } from './screens/LoginFolder/login/login.component';
 import { RegisterComponent } from './screens/LoginFolder/register/register.component';
@@ -19,13 +18,13 @@ import { BusinessPageComponent } from './screens/business-page/business-page.com
 import { BackComponent } from './layout/back/back.component';
 import { BusinessComponent } from './screens/business/business.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     BodyComponent,
     FooterComponent,
-    CryptoComponent,
     HomeComponent,
     LoginComponent,
     RegisterComponent,

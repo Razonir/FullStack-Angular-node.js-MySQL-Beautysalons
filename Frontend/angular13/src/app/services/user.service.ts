@@ -22,10 +22,25 @@ export class UserService {
     return this.httpClient.post<any>(`${registerUrl}`,user);
   }
   
+  allUsers(){
+    let users = this.baseURL+'auth/users'
+    return this.httpClient.get(users);
+  }
+
+  removeuser(uid:any){
+    console.log("2");
+    let users = this.baseURL+'auth/users/'
+    return this.httpClient.delete(users+uid);
+  }
+
+  
+
   getUserDetails(uid:any){
     return this.httpClient.post<any>('http://localhost:3000/auth',{"uid":uid});
   }
 
+  
+  
     login(body:any){
     return this.httpClient.post<any>('http://localhost:3000/auth/login', body,{
       observe:'body'

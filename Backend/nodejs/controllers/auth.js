@@ -58,6 +58,7 @@ exports.getUserDetails = async(req,res,next) =>{
   }
 }
 
+
 exports.login = async (req, res, next) => {
   const email = req.body.email;
   const password = req.body.password;
@@ -106,6 +107,8 @@ exports.signupbusiness = async (req, res, next) => {
   const blname = req.body.blname;
   const bname = req.body.bname;
   const bdescription = req.body.bdescription;
+  const bdescriptionf = req.body.bdescriptionf;
+  const bdescriptions = req.body.bdescriptions;
   const bemail = req.body.bemail;
   const bpassword = req.body.bpassword;
   const bcity = req.body.bcity;
@@ -124,6 +127,8 @@ exports.signupbusiness = async (req, res, next) => {
       blname: blname,
       bname: bname,
       bdescription: bdescription,
+      bdescriptionf: bdescriptionf,
+      bdescriptions: bdescriptions,
       bemail: bemail,
       bpassword: hashedPassword,
       bcity: bcity,

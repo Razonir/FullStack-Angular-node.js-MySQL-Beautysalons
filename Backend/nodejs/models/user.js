@@ -1,7 +1,8 @@
 const db = require('../util/database');
 
 module.exports = class User {
-  constructor(userfname,userlname, useremail, userpassword,usercity,useraddress,userphone) {
+  constructor(userid,userfname,userlname, useremail, userpassword,usercity,useraddress,userphone) {
+    this.userid = userid;
     this.userfname = userfname;
     this.userlname = userlname;
     this.useremail = useremail;
@@ -13,6 +14,15 @@ module.exports = class User {
 
   static find(useremail) {
     return db.execute('SELECT * FROM users WHERE useremail = ?', [useremail]);
+  }
+
+  static fetchAllUsers() {
+    return db.execute('SELECT * FROM users');
+  }
+
+  static deleteuser(userid) {
+    console.log("4");
+    return db.execute('DELETE FROM users WHERE userid = ?',[userid]);
   }
 
   static getDetails(uid) {

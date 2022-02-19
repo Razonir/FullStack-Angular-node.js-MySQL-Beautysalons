@@ -5,13 +5,30 @@ const User = require('../models/user');
 const Business = require('../models/business');
 const authController = require('../controllers/auth');
 const businessController = require('../controllers/business');
+const userController = require('../controllers/user');
 const db = require('../util/database')
 
 exportbid = Business.bid;
 router.get('/business', businessController.fetchAll);
+router.get('/users', userController.fetchAllUsers );
+
+router.delete('/users/:userid',(req,res,next)=>{
+  console.log("3");
+  User.deleteuser(req.params.userid)
+  .then(result =>{
+    res.status(200).json({
+    })
+  })
+  .catch(err=>{
+    console.log(err);
+    res.status(500).json({
+      error:err
+    })
+  })
+})
+
 
 router.get('/business/:bid',(req,res,next)=>{
-  console.log(req.params.bid);
   Business.findById(req.params.bid)
   .then(result =>{
     res.status(200).json({
@@ -47,6 +64,8 @@ router.post(
     body('blname').trim().not().isEmpty(),
       body('bname').trim().not().isEmpty(),
       body('bdescription').trim().not().isEmpty(),
+      body('bdescriptionf').trim().not().isEmpty(),
+      body('bdescriptions').trim().not().isEmpty(),
       body('bemail').isEmail().normalizeEmail().not().isEmpty(),
       body('bpassword').trim().not().isEmpty(),
       body('bcity').trim().not().isEmpty(),

@@ -1,5 +1,7 @@
+import { NONE_TYPE } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
-
+import { BusinessService } from 'src/app/services/business.service';
+import { UserService } from 'src/app/services/user.service';
 @Component({
   selector: 'app-back',
   templateUrl: './back.component.html',
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BackComponent implements OnInit {
 
-  constructor() { }
+  data:any
+  datauser:any
+  constructor(private businessService:BusinessService , private userService:UserService){}
+  ngOnInit(){
 
-  ngOnInit(): void {
+
+    this.businessService.getData().subscribe((data)=>{
+      this.data=data
+    })
+
+    this.userService.allUsers().subscribe((datauser)=>{
+      this.datauser=datauser
+    })
   }
 
+  removeUser(uid:string) {
+    console.log(1);
+    return this.userService.removeuser(parseInt(uid)), window.location.reload();
+  }
 }
+
+

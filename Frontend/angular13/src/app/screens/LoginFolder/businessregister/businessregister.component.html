@@ -138,6 +138,22 @@
         placeholder="תיאור ראשי"
         [(ngModel)]="business.bdescription"
       ></textarea>
+      <textarea
+      type="text"
+      id="bdescriptionf"
+      name="bdescriptionf"
+      class="form-input"
+      placeholder="תיאור ראשון"
+      [(ngModel)]="business.bdescriptionf"
+    ></textarea>
+    <textarea
+    type="text"
+    id="bdescriptions"
+    name="bdescriptions"
+    class="form-input"
+    placeholder="תיאור שני"
+    [(ngModel)]="business.bdescriptions"
+  ></textarea>
           <div class="wrap">
             <button type="submit"  class="form-btn button">הירשם</button>
           </div>
@@ -222,7 +238,7 @@
                   <div class="slider">
                       <div class="cardR textR">
                           <div class="textR">
-                              <div class="h1">תיאור</div>  
+                              <div class="h1">{{business.bdescriptionf}}</div>  
                                                           
                           </div>
                       </div>
@@ -288,7 +304,7 @@
                     </div>
                     <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
                       <div class="textR">
-                        <div class="h1">תיאור</div>  
+                        <div class="h1">{{business.bdescriptions}}</div>  
 
                       </div>            
                   </div>
