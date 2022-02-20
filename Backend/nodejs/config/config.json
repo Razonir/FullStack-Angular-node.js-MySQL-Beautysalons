@@ -1,6 +1,7 @@
 {
-    "host": "localhost",
-    "user": "root",
-    "database": "beautysalonsdb",
-    "password": "root"
+    "host": "eu-cdbr-west-02.cleardb.net",
+    "user": "b0b4935119af16",
+    "database": "heroku_74064f8b4bd8f08",
+    "password": "3de7a5e5"
 }
+
