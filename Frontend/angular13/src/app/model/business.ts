@@ -9,6 +9,7 @@ export class Business {
     bemail?: String;
     bpassword?: String;
     bgender?: String;
+    barea?: String;
     bcity?: String;
     baddress?: String;
     bphone?: String;

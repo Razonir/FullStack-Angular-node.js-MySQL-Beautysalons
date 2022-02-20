@@ -111,6 +111,7 @@ exports.signupbusiness = async (req, res, next) => {
   const bdescriptions = req.body.bdescriptions;
   const bemail = req.body.bemail;
   const bpassword = req.body.bpassword;
+  const barea = req.body.barea;
   const bcity = req.body.bcity;
   const baddress = req.body.baddress;
   const bphone = req.body.bphone;
@@ -131,6 +132,7 @@ exports.signupbusiness = async (req, res, next) => {
       bdescriptions: bdescriptions,
       bemail: bemail,
       bpassword: hashedPassword,
+      barea: barea,
       bcity: bcity,
       baddress: baddress,
       bphone: bphone,

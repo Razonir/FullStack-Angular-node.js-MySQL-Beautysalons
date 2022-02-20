@@ -63,7 +63,23 @@
             />
             <label for="bpassword">סיסמא</label>
           </div>
-
+          <div class="form-group col-md-6">
+            <select class="form-select" 
+            aria-label="Default select example"
+            id="barea"
+            name="barea"
+            [(ngModel)]="business.barea">
+              <option selected>מחוז</option>
+              <option value="1">צפון</option>
+              <option value="2">חיפה</option>
+              <option value="3">מרכז</option>
+              <option value="4">תל אביב</option>
+              <option value="5">ירושלים</option>
+              <option value="6">דרום</option>
+              <option value="7">יהודה ושומרון</option>
+            </select>
+            <label class="select-label" for="barea">מחוז</label>
+          </div>
           <div class="form-group col-md-6">
             <input
               type="text"
@@ -130,6 +146,7 @@
           />
           <label for="blogo">לוגו</label>
         </div>
+        
         <textarea
         type="text"
         id="bdescription"

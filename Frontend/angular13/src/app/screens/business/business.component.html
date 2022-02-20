@@ -19,8 +19,23 @@
             <div routerLinkActive="active-link" [routerLink]="['/businesspage/',item.bid]" class="cardR" *ngFor="let item of data">
                     <div class="bigimg"><img src="../../../assets/blogo.png" alt="{{item.bname}}"></div>
                     <div class="itemR"><a class="bname">{{item.bname}} - {{item.bsubject}}</a></div>
+                    {{item.barea}}
+
                     <div class="itemR"><a class="bcity">{{item.bcity}}</a></div>
             </div>
         </div>
     </div>
+    <div class="recommendedCont">
+        <div class="title">צפון</div>
+        <div class="recommended">
+            <div routerLinkActive="active-link" [routerLink]="['/businesspage/',item.bid]" *ngFor="let item of data" >
+                <div class="cardR" *ngIf="item.barea==='1' ">
+                    <div class="bigimg"><img src="../../../assets/blogo.png" alt="{{item.bname}}"></div>
+                    <div class="itemR"><a class="bname">{{item.bname}} - {{item.bsubject}}</a></div>
+                    <div class="itemR"><a class="bcity">{{item.bcity}}</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
 </div>

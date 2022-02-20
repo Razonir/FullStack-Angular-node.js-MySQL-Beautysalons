@@ -9,15 +9,9 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class BusinessComponent implements OnInit {
 
-  userDetails:any
   data:any
   constructor(private businessService:BusinessService,private userService:UserService){}
   ngOnInit(){
-    console.log(localStorage.getItem("uid"));
-    let uid = localStorage.getItem("uid");
-    this.userService.getUserDetails(uid).subscribe((data)=>{
-      this.userDetails = data.userDetails;
-    });
     this.businessService.getData().subscribe((data)=>{
       this.data=data
     })
