@@ -33,6 +33,6 @@ export class HeaderComponent implements OnInit {
     document.getElementById("menu")?.classList.remove("show");
   }
   goToHome(){
-    window.location.href = "http://localhost:4200/";
+    window.location.href = "https://beautysalons.netlify.app/";
     }
 }

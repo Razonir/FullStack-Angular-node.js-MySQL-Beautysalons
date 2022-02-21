@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
     })
   }
   goToHome(){
-    window.location.href = "http://localhost:4200/";
+    window.location.href = "https://beautysalons.netlify.app/";
     }
  
   login() {
