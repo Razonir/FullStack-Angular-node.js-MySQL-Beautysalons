@@ -10,7 +10,7 @@ import { ErrorHandlerService } from "./error-handler.service";
 })
 export class UserService {
 
-  private baseURL = "http://beauty-salons-server.herokuapp.com/";
+  private baseURL = "https://beauty-salons-server.herokuapp.com/";
   constructor(private httpClient: HttpClient) { }
 
   httpOptions: { headers: HttpHeaders } = {
@@ -36,13 +36,13 @@ export class UserService {
   
 
   getUserDetails(uid:any){
-    return this.httpClient.post<any>('http://beauty-salons-server.herokuapp.com/auth',{"uid":uid});
+    return this.httpClient.post<any>('https://beauty-salons-server.herokuapp.com/auth',{"uid":uid});
   }
 
   
   
     login(body:any){
-    return this.httpClient.post<any>('http://beauty-salons-server.herokuapp.com/auth/login', body,{
+    return this.httpClient.post<any>('https://beauty-salons-server.herokuapp.com/auth/login', body,{
       observe:'body'
     });
   }

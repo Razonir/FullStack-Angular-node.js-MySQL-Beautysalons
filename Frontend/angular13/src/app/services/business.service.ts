@@ -10,7 +10,7 @@ import { bindCallback, map, Observable, retry } from 'rxjs';
 export class BusinessService {
 
 
-  private baseURL = "http://beauty-salons-server.herokuapp.com/";
+  private baseURL = "https://beauty-salons-server.herokuapp.com/";
   constructor(private httpClient: HttpClient) { }
 
   createBusiness(business: Business){
