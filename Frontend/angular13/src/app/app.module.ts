@@ -17,6 +17,7 @@ import { BusinessloginComponent } from './screens/LoginFolder/businesslogin/busi
 import { BusinessPageComponent } from './screens/business-page/business-page.component';
 import { BackComponent } from './layout/back/back.component';
 import { BusinessComponent } from './screens/business/business.component';
+import { HomecontentComponent } from './screens/homecontent/homecontent.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { BusinessComponent } from './screens/business/business.component';
     BusinessloginComponent,
     BusinessPageComponent,
     BackComponent,
-    BusinessComponent
+    BusinessComponent,
+    HomecontentComponent
   ],
   imports: [
     BrowserModule,
