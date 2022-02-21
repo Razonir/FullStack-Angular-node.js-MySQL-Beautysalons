@@ -7,7 +7,7 @@
       "type": "pwa-chrome",
       "request": "launch",
       "preLaunchTask": "npm: start",
-      "url": "https://beautysalons.netlify.app/"
+      "url": "https://beautysalons.netlify.app/Frontend/angular13/"
     },
     {
       "name": "ng test",
