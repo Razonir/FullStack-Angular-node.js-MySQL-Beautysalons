@@ -44,8 +44,8 @@ div{
 .fullhomepage{
     padding: 20px 4%;
     .content{
-        margin-top: 150px; 
-        margin-bottom: 50px;
+        margin-top: 100px; 
+        margin-bottom: 0px;
         text-align:center;
         h1{
             font-size: 40px;
@@ -112,63 +112,12 @@ div{
         }
     }
 
-    .boximgtext{
-        margin-top: 150px; 
-        text-align:center;
-        background: white;
-        padding: 0 4%;
-        transition: 1s;
-        border-radius: 28px;
-        background-color: #fff;
-        box-shadow: 0px 5px 30px 10px #d5d3e08c;
-        h1{
-            font-size: 40px;
-        }
-        .slider{
-            margin-top:50px;
-            margin-bottom:50px;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-auto-rows: auto;
-            justify-items: center;
-
-            .cardR{
-                width: 100%;
-                border-radius: 28px;
-                padding:10px;
-                text-align:center; 
-                margin: auto 0;
-                img{
-                    width: 300px;
-                    transition: 0.2s;
-                }
-                .bigimg{
-                    transition: 1s !important;
-                    transform: scale(1.2)
-                }
-                .text{
-                    text-align:right;
-                }
-            }
-            .card text{
-                display: flex;
-                justify-content: flex-start !important;
-            }
-        }
-        &:hover{
-            transform: scale(0.95);
-            .bigimg{
-                    transform: scale(1.2) translateX(-150px) !important;
-            }
-        }
-    }
-    .boximgtextcolor{
+    .boximgtextcolor,.boximgtext{
         margin-top: 200px; 
         color: white;
         transition: 1s;
         text-align:center;
         height: 440px;
-        background: white;
         padding: 0 4%;
         border-radius: 28px;
         background-image: linear-gradient(45deg, #6946ec, #6946ece6);
@@ -223,6 +172,10 @@ div{
             }
         }
     }
+}
+.boximgtext{
+    background-image: linear-gradient(45deg, #ffffff, #ffffffe6) !important;
+    color: black !important;
 }
 @media only screen and (max-width: 600px) {
     .show-menu-btn{
