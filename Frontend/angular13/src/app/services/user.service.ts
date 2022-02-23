@@ -28,7 +28,6 @@ export class UserService {
   }
 
   removeuser(uid:any){
-    console.log("2");
     let users = this.baseURL+'auth/users/'
     return this.httpClient.delete(users+uid);
   }
@@ -45,6 +44,10 @@ export class UserService {
     return this.httpClient.post<any>('https://beauty-salons-server.herokuapp.com/auth/login', body,{
       observe:'body'
     });
+  }
+
+  loggedIn(){
+    return !!localStorage.getItem('token');
   }
 
 }

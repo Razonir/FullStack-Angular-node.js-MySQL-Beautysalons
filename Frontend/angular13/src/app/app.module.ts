@@ -18,6 +18,7 @@ import { BusinessPageComponent } from './screens/business-page/business-page.com
 import { BackComponent } from './layout/back/back.component';
 import { BusinessComponent } from './screens/business/business.component';
 import { HomecontentComponent } from './screens/homecontent/homecontent.component';
+import { AuthGuard } from './guards/auth.guard';
 
 
 @NgModule({
@@ -43,7 +44,7 @@ import { HomecontentComponent } from './screens/homecontent/homecontent.componen
     FormsModule,
     ReactiveFormsModule
     ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

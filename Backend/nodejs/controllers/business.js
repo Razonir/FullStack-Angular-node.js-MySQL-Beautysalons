@@ -2,6 +2,7 @@ const { validationResult } = require('express-validator');
 
 const Business = require('../models/business');
 
+// all business data
 exports.fetchAll = async (req, res, next) => {
     try {
       const [allBusiness] = await Business.fetchAll();

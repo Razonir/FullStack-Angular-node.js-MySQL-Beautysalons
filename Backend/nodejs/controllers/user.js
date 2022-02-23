@@ -2,6 +2,7 @@ const { validationResult } = require('express-validator');
 
 const User = require('../models/user');
 
+// all users 
 exports.fetchAllUsers = async (req, res, next) => {
     try {
       const [allUsers] = await User.fetchAllUsers();
@@ -14,6 +15,7 @@ exports.fetchAllUsers = async (req, res, next) => {
     }
   };
 
+  // delete user
   exports.deleteuser = async (req, res, next) => {
     console.log("5");
     try {

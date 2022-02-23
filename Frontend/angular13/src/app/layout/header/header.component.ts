@@ -24,7 +24,7 @@ export class HeaderComponent implements OnInit {
   }
 
   signout(){
-    return localStorage.clear(),    this.goToHome();
+    return localStorage.removeItem('token'),    this.goToHome();
   }  
    menuShow() {
     document.getElementById("menu")?.classList.toggle("show");

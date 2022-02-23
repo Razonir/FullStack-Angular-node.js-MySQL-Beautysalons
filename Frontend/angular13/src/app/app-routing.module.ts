@@ -7,10 +7,11 @@ import { BusinessregisterComponent } from './screens/LoginFolder/businessregiste
 import { BusinessPageComponent } from './screens/business-page/business-page.component';
 import { BusinessComponent } from './screens/business/business.component';
 import { BackComponent } from './layout/back/back.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
 {path: '', component: HomeComponent},
-{path: 'admin', component: BackComponent},
+{path: 'admin', component: BackComponent ,canActivate: [AuthGuard]},
 {path: 'login', component: LoginComponent},
 {path: 'register', component: RegisterComponent},
 {path: 'registerbusiness', component: BusinessregisterComponent},

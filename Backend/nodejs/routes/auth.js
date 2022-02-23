@@ -7,11 +7,18 @@ const authController = require('../controllers/auth');
 const businessController = require('../controllers/business');
 const userController = require('../controllers/user');
 const db = require('../util/database')
+const jwt = require('jsonwebtoken');
+
 
 exportbid = Business.bid;
-router.get('/business', businessController.fetchAll);
-router.get('/users', userController.fetchAllUsers );
 
+//all users data
+router.get('/business', businessController.fetchAll);
+
+//all users data
+router.get('/users', userController.fetchAllUsers ); 
+
+//delete user
 router.delete('/users/:userid',(req,res,next)=>{
   console.log("3");
   User.deleteuser(req.params.userid)
@@ -27,7 +34,7 @@ router.delete('/users/:userid',(req,res,next)=>{
   })
 })
 
-
+//business by id
 router.get('/business/:bid',(req,res,next)=>{
   Business.findById(req.params.bid)
   .then(result =>{
@@ -43,6 +50,7 @@ router.get('/business/:bid',(req,res,next)=>{
   })
 })
 
+//user signup
 router.post(
   '/signup',
   [
@@ -57,6 +65,7 @@ router.post(
   authController.signup
 );
 
+//business signup
 router.post(
   '/signupbusiness',
   [
@@ -78,8 +87,29 @@ router.post(
   authController.signupbusiness
 );
 
+//user login
 router.post('/login',   authController.login);
 
+
 router.post('/',authController.getUserDetails);
+
+router.get('/username'), verifyToken,function(req,res,next){
+  return res.status(200).json(decodedToken.userfname);
+}
+
+// token verify
+var decodedToken ='';
+function verifyToken(req,res,next){
+  let token = req.query.token;
+
+  jwt.verify(token,'secret',function(err,tokendata){
+    if(err){
+      return res.status(400).json({message: 'Inauthorized request'});
+    }
+    if(tokendata){
+      decodedToken = tokendata;
+    }
+  })
+}
 
 module.exports = router;
