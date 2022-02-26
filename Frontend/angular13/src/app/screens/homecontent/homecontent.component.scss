@@ -1,8 +1,7 @@
 $primary: #169aff;
-
 .whyus{
-        
     margin: 100px 15%;
+    
     h1{
         text-align: center;
     }
@@ -17,7 +16,6 @@ $primary: #169aff;
             }
             width: 100%;
             font-size: 1.2rem;
-
         }
     }
 }
@@ -104,9 +102,6 @@ $primary: #169aff;
 }
 .cardc.email{
     display: flex;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
     border-radius: 3px;
     padding: 20px;
     margin: 15px;
@@ -126,6 +121,7 @@ $primary: #169aff;
         .submit{
             background: white;
             color: $primary;
+            width: 200px;
         }
     }
 }
@@ -171,4 +167,9 @@ form{
     padding: 0 0 50px 0;
 }
 }
+}
+@media screen and (max-width: 700px) {
+    .whyus{
+        display: none;
+    }
 }
