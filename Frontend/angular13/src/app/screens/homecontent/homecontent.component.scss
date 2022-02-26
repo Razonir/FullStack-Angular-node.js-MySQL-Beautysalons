@@ -1,189 +1,185 @@
-div{
-    background-color: transparent;
-    border: none;
-    font-size: 18px;
-}
+$primary: #169aff;
 
-.buttonR{
-    display: flex;
-    width: 150px;
-    padding: 10px 20px;
-    text-decoration: none;
-    transition: 0.5s;
-    background-color: #6946ec;
-    border-radius: 28px;
-    .textR{
-        width: 80%;
-        color: white;
+.whyus{
+        
+    margin: 100px 15%;
+    h1{
         text-align: center;
     }
-    .arrowR{
+    .twosides{
         display: flex;
-        overflow: hidden;
-        -webkit-filter: invert(100%);
-        transition: 0.5s;
-        width: 20%;
-        transform: rotate(180deg) translateY(0px);
-        flex-grow: 1;
-        .firstR,.secR{
-            transition: 0.2s;
+        align-items: center;
+        .cardc{
+            h1{
+                color: $primary;
+                font-size: 30px;
+                text-align: right;
+            }
+            width: 100%;
+            font-size: 1.2rem;
+
         }
     }
-    &:hover{
-        background: #3e2a85;
-        .firstR,.secR{
-            transform: translateX(25px);
-        }
-
-    }
 }
-.button.top{
-    margin-top: 100px;
-}
+.blogsection{
+    box-shadow: 0 0 50px 50px #1225330c;
+    background: linear-gradient(#169aff, #0091ff);
+    margin: 50px 0;
 
-.fullhomepage{
-    padding: 20px 4%;
-    .content{
-        margin-top: 100px; 
-        margin-bottom: 0px;
-        text-align:center;
+}
+.blogsection,.phonesection{
+    z-index: 2;
+
+    .blogposts,.iphonepost{
+        margin: 0 15%;
+        padding: 100px 0;
+        display: flex;
+        border-radius: 8px;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-around;
         h1{
-            font-size: 40px;
+            font-size: 2.2rem;
+            transition: 0.5s;
+            color: white;
         }
-        .slider{
-            margin-top:50px;
-            margin-bottom:50px;
+        p{
+            font-size: 1.2rem;
+            color: white;
+
+
+        }
+        .one{
+            flex: 0 1 calc(33% - 3rem);
+            transition: 0.5s;
+            img{
+                background-color: white;
+                border-radius: 8px;
+                padding: 10px;
+                box-shadow: 5px 5px 50px 50px rgba(52, 182, 214, 0.199);
+            }
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+        .mobile{
+            background-color: white;
+            box-shadow: 0 0 50px 40px rgba(0, 0, 0, 0.062);
+            color: black;
+            width: 100%;
+            padding: 10px;
+            height: 250px;
             display: flex;
-            flex-wrap: wrap;
+            border-radius: 28px;
             justify-content: center;
-            grid-gap: 5rem;
-            padding: 0 4%;
-            justify-items: center;
-            .cardR{
-                flex: 0 1 calc(50% - 1em);
-                background: white;
-                transition: 0.5s;
-                width: 100%;
-                cursor: pointer;
-                max-width: 250px;
-                border-radius: 28px;
-                box-shadow:0 0px 30px 0px #00000025;
-                img{
-                    width: 100%;
-                    height: 70%;
-                    margin-bottom: 10px;
-                    border-radius: 28px 28px 0 0;
+            align-items: center;
+            .onecol{
+                margin: 15px;
+                color: black;
+                p{
+                    color: black;
                 }
-                &:hover{
-                    transform: translateY(-20px);
-                    box-shadow:0 30px 20px -20px #0000005b;
+                h1{
+                    color: $primary;
+                }
+                .iphone{
+                    margin-top: -50px;
+                    transition: 1s;
+                    transform: rotate3d(1, 1, 1, 14deg);
+                }
+                .iphone.sec{
+                    margin-top: 50px;
                 }
             }
-        }
-    }
-    .textimg{
-        margin-top: 230px; 
-        text-align:center;
 
-        .slider{
-            margin-top:50px;
-            margin-bottom:50px;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-auto-rows: auto;
-            justify-items: center;
-            padding: 0 4%;
-            .cardR{
-                width: 100%;
-                border-radius: 28px;
-                padding:10px;
-                text-align:center; 
-                margin: auto 0;
-                img{
-                    width: 300px;
-                }
-                .h1{
-                    font-size: 20px;
-                }
-                .text{
-                    text-align:right;
-                    font-size: 25px;
-                }
-            }
-            .card text{
-                display: flex;
-                justify-content: flex-start !important;
-            }
         }
-    }
-
-    .boximgtextcolor,.boximgtext{
-        margin-top: 200px; 
-        color: white;
-        transition: 1s;
-        text-align:center;
-        height: 440px;
-        padding: 0 4%;
-        border-radius: 28px;
-        background-image: linear-gradient(45deg, #6946ec, #6946ece6);
-        box-shadow: 0px 5px 30px 10px #d5d3e08c;
         &:hover{
-            transform: scale(0.97);
-            img.one{
-                transform: translateY(131px);
+            .iphone{
+                transform: matrix(1, 0, 0, 1, -18, 72) rotate3d(1, 1, 1, 14deg) !important;
             }
-            img.two{
-                transform: translateY(-131px);
-            }
-        }
-        h1{
-            font-size: 60px;
-        }
-        .slider{
-            margin-top:50px;
-            margin-bottom:50px;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-auto-rows: auto;
-            justify-items: center;
+            .iphone.sec{
+                transform: matrix(1, 0, 0, 1, 18, -72) rotate3d(1, 1, 1, 14deg) !important;
 
-            .cardR{
-                width: 100%;
-                border-radius: 28px;
-                padding:10px;
-                text-align:center;
-                img{
-                    width: 300px;
-                }
-                .h1{
-                    font-size: 25px;
-                }
-                .text{
-                    text-align:right;
-                }
-                img.one{
-                    margin-top: -120px !important;
-                    transition: 1s;
-
-                }
-                img.two{
-                    margin-bottom: -130px !important; 
-                    transition: 1s;
-
-                }
-            }
-            .card text{
-                display: flex;
-                justify-content: flex-start !important;
             }
         }
     }
 }
-.boximgtext{
-    background-image: linear-gradient(45deg, #ffffff, #ffffffe6) !important;
-    color: black !important;
+
+.contact{
+    
+    background: linear-gradient(#169aff, #0091ff);
+    margin: 0;
+    padding: 0 15%;
+
+}
+.cardc.email{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    padding: 20px;
+    margin: 15px;
+    form{
+        display: flex;
+        input{
+            border-radius: 8px;
+            padding: 20px;
+            margin: 5px;
+            color: white;
+            
+            background: transparent;
+            border: 2px solid white;
+            &::placeholder{
+                color: white !important;
+            }
+        }
+        .submit{
+            background: white;
+            color: $primary;
+        }
+    }
 }
 
-.app{
-    transform: scale(0.7);
+@media screen and (max-width: 1500px) {
+.iphone.sec{
+    display: none;
+}
+}
+
+@media screen and (max-width: 1300px) {
+.blogsection{
+    .blogposts{
+        .one{
+            flex: 0 1 calc(100% - 1rem);
+        }
+    }
+}
+.cat{
+    .categories{
+        .one{
+            flex: 0 1 calc(50% - 1rem);
+        }
+    }
+}
+.twosides{
+    flex-direction: column;
+    .cardc{
+        display: flex;
+        justify-content: center;
+    }
+}
+.mobile{
+    flex-wrap: wrap;   
+    height: max-content !important;
+    .iphone{
+        display: none;
+    }
+}
+.cardc.email{
+form{
+    display: inline;
+    padding: 0 0 50px 0;
+}
+}
 }

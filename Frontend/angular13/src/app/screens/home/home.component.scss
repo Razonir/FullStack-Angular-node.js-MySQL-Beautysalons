@@ -248,11 +248,7 @@ $primary: #169aff;
         }
     }
 
-@media screen and (max-width: 1500px) {
-    .iphone.sec{
-        display: none;
-    }
-}
+
 
 @media screen and (max-width: 1300px) {
     .blogsection{
@@ -269,25 +265,5 @@ $primary: #169aff;
             }
         }
     }
-    .twosides{
-        flex-direction: column;
-        .cardc{
-            display: flex;
-            justify-content: center;
-        }
-    }
-    .mobile{
-        flex-wrap: wrap;   
-        height: max-content !important;
-        .iphone{
-            display: none;
-        }
- }
- .cardc.email{
-    form{
-        display: inline;
-        padding: 0 0 50px 0;
-    }
-}
 }
 
