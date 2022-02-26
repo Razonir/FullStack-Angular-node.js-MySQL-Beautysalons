@@ -1,119 +1,130 @@
-.header{
-  text-align: center;
-  font-size: 30px;
-  margin-bottom: 15px;
-}
-form {
-    background: white;
-    max-width: 20rem;
-    margin: 1% auto;
-    padding: 2rem;
-    border-radius: 12px;
-    color: #454d7d;
-  }
-  
-  input{
-    position: relative;
-    margin-bottom: 2rem;
-  }
-  input {
-    width: 100%;
-    padding: 1rem;
-    border: 1.2px solid #454d7d;
-    font-size: 1.2rem;
-    outline: none;
-    border-radius: 12px;
-    background: transparent;
-    color: #454d7d;
-  }
-  input:hover,
-  input:focus {
-    border-color: var(--main-color);
-  }
-  label {
-    position: absolute;
-    right: 1rem;
-    top: 1.2rem;
-    padding: 0 0.5rem;
-    transition: top 200ms ease-in, font-size 200ms ease-out;
-  }
-  
-  input:focus ~ label,
-  input:not(:placeholder-shown)input:not(:focus) ~ label {
-    top: -0.5rem;
-    font-size: 0.8rem;
-    background-color: white;
-    border-radius: 10px;
-  }
-  
-  .form-btn{
-  background-color: #6946ec;
-  color: #ffffff;
-  width: 100%;
-  height: 40px;
-  cursor: pointer;
-  border-radius: 8px;
-  font-weight: bolder;
-  font-size: 20px;
-  border:none;
-  }
-  
-  .topcard{
-    padding: 0 4%;
-    border-radius: 0 0 28px 28px ;
-    background-color: #fff;
-    box-shadow: 0px 5px 30px 10px #d5d3e08c;
-}
 
-.topcardcontent{
+.doublesrction{
   display: flex;
-  width: 100%;
-  align-items: center;
   
-  .left{
-      width: 42%;
-              padding-bottom: 50px;
+  height: 95%;
+  .section{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    .form{
+      display: flex;
 
-      .circle{
-          justify-content: center;
-       align-items: center;
-          width: 95%;
-          margin-top: 50px;
-          display: flex;
-          height: 70%;
-          border-radius: 50% 50% 50% 0;
-          box-shadow: 0px -20px 30px 30px #6946ec2b;
-          background-image: linear-gradient(0deg, #6946ec, #6946ece0);
-          transition: 0.9s;
-          &:hover{
-            transform: rotate(10deg);
+      .header{
+        font-size: 17px;
+        margin-bottom: 16px;
+      }
+      .footer{
+        text-align: center;
+        margin-top: 16px;
+
+      }
+      .loginwith{
+        display: flex;
+        justify-content: center;
+        cursor: not-allowed;
+      }
+    
+      form {
+        max-width: 20rem;
+        margin: 1% auto;
+        padding: 2rem;
+        border-radius: 12px;
+        color: #454d7d;
+      }
+
+      .form-group {
+        position: relative;
+        height: 3rem;
+        margin-bottom: 2rem;
+      }
+      .form-input {
+        width: 100%;
+        padding: 1rem;
+        border: 1.2px solid #454d7d;
+        font-size: 1.2rem;
+        outline: none;
+        border-radius: 12px;
+        background: transparent;
+        color: #454d7d;
+      }
+      .form-input:hover,
+      .form-input:focus {
+        border-color: var(--main-color);
+      }
+      label {
+        position: absolute;
+        right: 1rem;
+        top: 1.2rem;
+        padding: 0 0.5rem;
+        transition: top 200ms ease-in, font-size 200ms ease-out;
+      }
+      
+      .form-input:focus ~ label,
+      .form-input:not(:placeholder-shown).form-input:not(:focus) ~ label {
+        top: -0.5rem;
+        font-size: 0.8rem;
+        background-color: white;
+        border-radius: 10px;
+      }
+      
+    .form-btn{
+      background-color: #169aff;
+      color: #ffffff;
+      width: 100%;
+      height: 40px;
+      cursor: pointer;
+      border-radius: 8px;
+      font-weight: bolder;
+      font-size: 20px;
+      border:none;
+}
+          .with-line {
+            display: block;
+            margin-bottom: 15px;
+            text-align: center;
           }
-          img{
-              width: 70%;
-              margin-top: -40px;
-              margin-left: -px;
+          
+          .with-line:before,
+          .with-line:after {
+            content: "";
+            display: inline-block;
+            border-top: 1px solid rgb(197, 197, 197);
+            width: 30%;
+            vertical-align: middle;
+            margin: 0 0.5em;
           }
+    }
+    .img{
+      background-image: url('/assets/no-makeup-shot-girl-with-doubt-while-lot-hands-trying-her-makeup_197531-13816.png');
+      background-size: cover;
+      width: 100%;
+      display: flex;
+      height: 100%;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      h1{
+        font-size: 70px;
+        color: rgba(255, 255, 255, 0.795);
+        text-shadow: 0 3px 3px rgb(0 0 0 / 10%);
+
       }
   }
-  .right{
-      flex-grow:1;
-      width: 58%;
-      .login{
-        text-align: center;
-        font-size: large;
-      }
-       .textBox{
-          width: 100%;
-          height: 100%;
-           
-          h2{
-              font-size: 60px;
-              margin: 0;
-              color:#6946ec;
-          }
-          p{
-              font-size: 30px;
-          }
-      }
   }
 }
+
+#password{
+  display: flex;
+  text-align: left;
+  justify-content: flex-end;
+  margin-top: -33px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+  @media screen and (max-width: 1000px) {
+    .img{
+      display: none !important;
+    }
+  }

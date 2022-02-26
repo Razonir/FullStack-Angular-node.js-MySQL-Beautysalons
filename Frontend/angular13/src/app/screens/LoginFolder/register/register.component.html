@@ -1,106 +1,105 @@
-<div class="topcard">
-  <app-header></app-header>
-  <div class="topcardcontent">
-      <div class="right">
+<app-header></app-header>
+  <div class="doublesrction">
+    <div class="section">
+      <div class="form">
         <form (ngSubmit) = "onSubmit()">
           <h1 class="form-title">הרשמה</h1>
-        <div class="form-body">
+          <div class="form-body">
             <div class="form-group">
-                <input
-                  type="text"
-                  id="userfname"
-                  name="userfname"
-                  class="form-input"
-                  placeholder=" "
-                  [(ngModel)]="user.userfname"
-                />
-                <label for="fname">שם פרטי</label>
-              </div>
-              <div class="form-group">
-                <input
-                  type="text"
-                  id="userlname"
-                  name="userlname"
-                  class="form-input"
-                  placeholder=" "
-                  [(ngModel)]="user.userlname"
-                />
-                <label for="userlname">שם משפחה</label>
-              </div>
-          <div class="form-group">
-            <input
-              type="email"
-              id="useremail"
-              name="useremail"
-              class="form-input"
-              placeholder=" "
-              autocomplete="off"
-              [(ngModel)]="user.useremail"
-            />
-            <label for="useremail">אימייל</label>
+              <input
+                    type="text"
+                    id="userfname"
+                    name="userfname"
+                    class="form-input"
+                    placeholder=" "
+                    [(ngModel)]="user.userfname"
+              />
+              <label for="fname">שם פרטי</label>
+            </div>
+            <div class="form-group">
+              <input
+                    type="text"
+                    id="userlname"
+                    name="userlname"
+                    class="form-input"
+                    placeholder=" "
+                    [(ngModel)]="user.userlname"
+              />
+              <label for="userlname">שם משפחה</label>
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                id="useremail"
+                name="useremail"
+                class="form-input"
+                placeholder=" "
+                autocomplete="off"
+                [(ngModel)]="user.useremail"
+              />
+              <label for="useremail">אימייל</label>
+            </div>
+            <div class="form-group">
+              <input
+                type="{{Type}}"
+                id="userpassword"
+                name="userpassword"
+                class="form-input"
+                placeholder=" "
+                [(ngModel)]="user.userpassword"
+              />
+              <label for="userpassword">סיסמא</label>
+              <i id="password" class="{{ShowPassword ? 'fas fa-eye' : 'fas fa-eye-slash' }}"
+              (click)="ShowPassword ? ShowPassword=false : ShowPassword=true ; Type =='password' ? Type ='text' : Type='password' " ></i>   
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                id="usercity"
+                name="usercity"
+                class="form-input"
+                placeholder=" "
+                [(ngModel)]="user.usercity"
+              />
+              <label for="usercity">עיר</label>
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                id="useraddress"
+                name="useraddress"
+                class="form-input"
+                placeholder=" "
+                [(ngModel)]="user.useraddress"
+              />
+              <label for="useraddress">כתובת(אפשרות)</label>
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                id="userphone"
+                name="userphone"
+                class="form-input"
+                placeholder=" "
+                [(ngModel)]="user.userphone"
+              />
+              <label for="userphone">מספר פלאפון</label>
+            </div>
+      
+            <div class="wrap">
+              <button type="submit"  class="form-btn button">הירשם</button>
+            </div>
+            <div class="log-in">
+              <a href="#">רשום לאתר? התחבר</a>
+            </div>
           </div>
-          <div class="form-group">
-            <input
-              type="password"
-              id="userpassword"
-              name="userpassword"
-              class="form-input"
-              placeholder=" "
-              [(ngModel)]="user.userpassword"
-            />
-            <label for="userpassword">סיסמא</label>
-          </div>
-          <div class="form-group">
-            <input
-              type="text"
-              id="usercity"
-              name="usercity"
-              class="form-input"
-              placeholder=" "
-              [(ngModel)]="user.usercity"
-            />
-            <label for="usercity">עיר</label>
-          </div>
-          <div class="form-group">
-            <input
-              type="text"
-              id="useraddress"
-              name="useraddress"
-              class="form-input"
-              placeholder=" "
-              [(ngModel)]="user.useraddress"
-            />
-            <label for="useraddress">כתובת(אפשרות)</label>
-          </div>
-          <div class="form-group">
-            <input
-              type="text"
-              id="userphone"
-              name="userphone"
-              class="form-input"
-              placeholder=" "
-              [(ngModel)]="user.userphone"
-            />
-            <label for="userphone">מספר פלאפון</label>
-          </div>
-    
-          <div class="wrap">
-            <button type="submit"  class="form-btn button">הירשם</button>
-          </div>
-          <div class="log-in">
-            <a href="#">רשום לאתר? התחבר</a>
-          </div>
+        </form>
+      </div>
+    </div>
+    <div class="section img">
+        <div class="img">
+          <h1>Beauty Salons</h1>
         </div>
-      </form>
-    
-      <div class="left-pic">
-        <img src="/Frontend/angular13/src/assets/blogo.png" alt="">
-      </div>
-      </div>
-      <div class="left">
-          <div class="circle">
-              <img src="/assets/biggirl.png" class="imgOne">
-          </div>
-      </div>
   </div>
 </div>
+<app-footer></app-footer>

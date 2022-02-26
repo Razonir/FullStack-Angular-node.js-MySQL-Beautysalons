@@ -1,33 +1,62 @@
-<div class="topcard">
-    <app-header></app-header>
-    <div class="topcardcontent">
-        <div class="right">
-            <span *ngIf="userDetails!=null">
-                <div class="login"><h2>דף זה אינו זמין עבורך<br>אתה כבר מחובר לאתר</h2></div>
-            </span>
-            <span *ngIf="userDetails==null"> 
-                <div class="formcontainer">
-                    <div class="formbody">
-                        <form style="width:100%;" [formGroup]="loginForm">
-                            <div class="header">התחברות</div>
-                            <div>
-                                    <input type="text" formControlName="email" matInput placeholder="Username" >
-                            </div>
-                            <div>
-                                    <input type="password" formControlName="password" matInput placeholder="Password">
-                            </div>
-                            <div style="margin-top:40px;">
-                                <button class="form-btn" (click)="login()">התחבר</button>
-                            </div>
-                        </form>
-                    </div>
+<app-header></app-header>
+<div class="doublesrction">
+    <div class="section">
+        <div class="form">
+        <form style="width:100%;" [formGroup]="loginForm">
+            <div class="header">
+                <p>ברוכים הבאים לביוטיס</p>
+                <p>אנא היכנס לחשבונך והתחל בהרפתקה</p>
                 </div>
-            </span>
-        </div>
-        <div class="left">
-            <div class="circle">
-                <img src="/assets/biggirl.png" class="imgOne">
+            <div class="form-group">
+                <input 
+                type="text"
+                formControlName="email"
+                matInput 
+                placeholder="אימייל" 
+                id="useremail"
+                name="useremail"
+                class="form-input"
+                placeholder=" "
+                autocomplete="off"
+                  />
+                <label for="useremail">אימייל</label>
             </div>
+            <div class="form-group">
+                <input 
+                type="{{Type}}"
+                formControlName="password"
+                matInput 
+                placeholder="סיסמא" 
+                id="userpassword"
+                name="userpassword"
+                class="form-input"
+                placeholder=" "
+                autocomplete="off"
+                  />
+                <label for="userpassword">סיסמא</label>
+                <i id="password" class="{{ShowPassword ? 'fas fa-eye' : 'fas fa-eye-slash' }}"
+                (click)="ShowPassword ? ShowPassword=false : ShowPassword=true ; Type =='password' ? Type ='text' : Type='password' " ></i>     
+            </div>
+            <div>
+                <button class="form-btn" (click)="login()">התחבר</button>
+            </div>
+            <div class="footer">
+                <p>חדש בפלטפורמה</p>
+                <a class="nav-link" routerLink="/register">צור חשבון חדש בחינם!</a>
+
+            </div>
+            <span class="with-line">או</span>
+            <div class="loginwith">
+                <img width="250px" src="/assets/login.png" alt="" title="בקרוב">
+            </div>
+        </form> 
+    </div>
+    </div>
+    <div class="section img">
+        <div class="img">
+            <h1>Beauty Salons</h1>
         </div>
     </div>
 </div>
+
+<app-footer></app-footer>

@@ -8,6 +8,7 @@ import { BusinessPageComponent } from './screens/business-page/business-page.com
 import { BusinessComponent } from './screens/business/business.component';
 import { BackComponent } from './layout/back/back.component';
 import { AuthGuard } from './guards/auth.guard';
+import { BusinessinterfaceComponent } from './screens/businessinterface/businessinterface.component';
 
 const routes: Routes = [
 {path: '', component: HomeComponent},
@@ -16,6 +17,7 @@ const routes: Routes = [
 {path: 'register', component: RegisterComponent},
 {path: 'registerbusiness', component: BusinessregisterComponent},
 {path: 'business', component: BusinessComponent},
+{path: 'businessinterface', component: BusinessinterfaceComponent},
 {
   path: 'businesspage',
   children: [

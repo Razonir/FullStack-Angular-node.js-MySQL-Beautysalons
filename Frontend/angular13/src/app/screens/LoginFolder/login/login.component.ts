@@ -18,7 +18,8 @@ export class LoginComponent implements OnInit {
   userDetails:any
   data:any
   loginForm: FormGroup;
-  
+  Type = "password";
+  ShowPassword = false;
   constructor(private businessService:BusinessService,
     private userService: UserService,
     private router: Router,

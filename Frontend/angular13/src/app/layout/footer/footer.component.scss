@@ -5,15 +5,20 @@
         position: fixed;
         bottom: 0px;
         background-color: #fff;
+        box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.082);
         width: 100%;
-        display: flex;
-        justify-content: space-around;
         height: 60px;
-        .icon{
-            width: 20px;
-            height: 20px;
-            margin: 20px;
-            background: black;
+        .icons{
+            display: flex;
+            text-align: center;
+            .icon{
+                text-decoration: none;
+                color: black;
+                transform: scale(1.3);
+                width: 100%;
+                height: 20px;
+                margin: 20px;
+            }
         }
     }
 
@@ -24,7 +29,6 @@
     .content{
 
         .slider{
-            margin-top:50px;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             grid-auto-rows: auto;

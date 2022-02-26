@@ -19,6 +19,10 @@ import { BackComponent } from './layout/back/back.component';
 import { BusinessComponent } from './screens/business/business.component';
 import { HomecontentComponent } from './screens/homecontent/homecontent.component';
 import { AuthGuard } from './guards/auth.guard';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatIconModule} from '@angular/material/icon';
+import { BusinessinterfaceComponent } from './screens/businessinterface/businessinterface.component'
+
 
 
 @NgModule({
@@ -35,14 +39,18 @@ import { AuthGuard } from './guards/auth.guard';
     BusinessPageComponent,
     BackComponent,
     BusinessComponent,
-    HomecontentComponent
+    HomecontentComponent,
+    BusinessinterfaceComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatIconModule
     ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]

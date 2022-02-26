@@ -1,39 +1,52 @@
-
-<div class="topcard">
-    <app-header></app-header>
-    <div class="topcardcontent">
-        <!-- <span *ngIf="userDetails==null"> 
-        <div class="loginforfull">
-            <div class="login"> <b>הירשם בחינם</b>!<br>בשביל גישה מלאה לאתר
-                <li><a class="buttonR" routerLinkActive="active-link" routerLink="/register">הרשמה</a></li>
-                <li><a routerLinkActive="active-link" routerLink="/login">כבר רשום התחבר</a></li>
-            </div>
-        </div>
-        </span> -->
+<app-header></app-header>
+<div class="doublesection">
+    <div class="section src">
+        <input type="text" placeholder="הקלידו שם העסק" [(ngModel)]="businessname">
+        <input type="text" placeholder="הקלידו שם העיר" [(ngModel)]="businesscity">
+        {{businessname}}
+        {{businesscity}}
     </div>
-</div>
-<div class="page">
-    <div class="recommendedCont">
-        <div class="title">מומלצים בשבילך</div>
-        <div class="recommended">
-            <div routerLinkActive="active-link" [routerLink]="['/businesspage/',item.bid]" class="cardR" *ngFor="let item of data">
-                    <div class="bigimg"><img src="../../../assets/blogo.png" alt="{{item.bname}}"></div>
-                    <div class="itemR"><a class="bname">{{item.bname}} - {{item.bsubject}}</a></div>
-                    <div class="itemR"><a class="bcity">{{item.bcity}}</a></div>
+    <div class="section">
+        <div class="page">
+            <div class="result">
+                <div class="title">תוצאות חיפוש</div>
+                    <div class="recommended">
+                        <div routerLinkActive="active-link" [routerLink]="['/businesspage/',item.bid]" *ngFor="let item of data" >
+                            <div *ngIf="businessname==''">
+                                <div class="cardR"  *ngIf="city(item.bcity)">
+                                    <div class="bigimg"><img src="../../../assets/blogo.png" alt="{{item.bname}}"></div>
+                                    <div class="itemR"><a class="bname">{{item.bname}} - {{item.bsubject}}</a></div>
+                                    <div class="itemR"><a class="bcity">{{item.bcity}}</a></div>
+                                </div>
+                            </div>
+                            <div *ngIf="businesscity==''">
+                                <div class="cardR"  *ngIf="name(item.bname)">
+                                    <div class="bigimg"><img src="../../../assets/blogo.png" alt="{{item.bname}}"></div>
+                                    <div class="itemR"><a class="bname">{{item.bname}} - {{item.bsubject}}</a></div>
+                                    <div class="itemR"><a class="bcity">{{item.bcity}}</a></div>
+                                </div>
+                            </div>
+                            <div *ngIf="businesscity!='' && businessname!=''">
+                                <div class="cardR"  *ngIf="name(item.bname) && city(item.bcity)">
+                                    <div class="bigimg"><img src="../../../assets/blogo.png" alt="{{item.bname}}"></div>
+                                    <div class="itemR"><a class="bname">{{item.bname}} - {{item.bsubject}}</a></div>
+                                    <div class="itemR"><a class="bcity">{{item.bcity}}</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </div>
-        </div>
-    </div>
-    <div class="recommendedCont">
-        <div class="title">צפון</div>
-        <div class="recommended">
-            <div routerLinkActive="active-link" [routerLink]="['/businesspage/',item.bid]" *ngFor="let item of data" >
-                <div class="cardR" *ngIf="item.barea==='1' ">
-                    <div class="bigimg"><img src="../../../assets/blogo.png" alt="{{item.bname}}"></div>
-                    <div class="itemR"><a class="bname">{{item.bname}} - {{item.bsubject}}</a></div>
-                    <div class="itemR"><a class="bcity">{{item.bcity}}</a></div>
+            <div class="recommendedCont">
+                <div class="title">מומלצים בשבילך</div>
+                <div class="recommended">
+                    <div routerLinkActive="active-link" [routerLink]="['/businesspage/',item.bid]" class="cardR" *ngFor="let item of data">
+                            <div class="bigimg"><img src="../../../assets/blogo.png" alt="{{item.bname}}"></div>
+                            <div class="itemR"><a class="bname">{{item.bname}} - {{item.bsubject}}</a></div>
+                            <div class="itemR"><a class="bcity">{{item.bcity}}</a></div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    
 </div>
+<app-footer></app-footer>

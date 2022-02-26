@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient , HttpHeaders  } from '@angular/common/http';
+import { HttpClient , HttpHeaders, HttpParams  } from '@angular/common/http';
 import { User } from '../model/user';
 import { Observable, BehaviorSubject } from "rxjs";
 import { first, catchError, tap } from "rxjs/operators";
@@ -49,5 +49,6 @@ export class UserService {
   loggedIn(){
     return !!localStorage.getItem('token');
   }
+
 
 }

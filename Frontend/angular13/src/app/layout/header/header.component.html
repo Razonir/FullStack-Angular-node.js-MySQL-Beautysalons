@@ -1,28 +1,38 @@
-<header>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+        <button class="btn btn-outline-success" type="submit" routerLink="/businessinterface">ממשק עסקים</button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul *ngIf="userDetails!=null" class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/">בית</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/" (click)="signout()">התנתק</a>
+                </li>
+                <li *ngIf="userDetails.userrole === 'admin'">
+                   <a class="nav-link" routerLink="/admin">ממשק ניהול</a>
+                </li>
 
-    <input type="checkbox" id="toggle-btn">
-    <label for="toggle-btn" class="show-menu-btn">=</label>
-    <div class="brand-logo">
-        <img src="/assets/biggirl.png" alt="Brand Logo">
-    </div>
-    <div class="brand-logo">
-        <span><b>לוגו</b><br>תיאור-קצר</span>
-    </div>
-
-    <nav>
-        <ul class="navigation">
-            <span *ngIf="userDetails!=null">
-                    <li><a routerLink="/" (click)="signout()">התנתק</a></li>
-                    <li><span  *ngIf="userDetails.userrole === 'admin'"><a routerLinkActive="active-link" routerLink="/admin">ממשק ניהול</a></span></li>
-                </span>
-                     <span *ngIf="userDetails==null"> 
-                            <li><a routerLinkActive="active-link" routerLink="/login">התחברות</a></li>
-                            <li><a routerLinkActive="active-link" routerLink="/register">הרשמה</a></li>
-                            <li> <a routerLinkActive="active-link" routerLink="/registerbusiness">עסק</a></li>
-                    </span>
-                <li><a routerLink="/">בית</a></li>
-            <label for="toggle-btn" class="hide-menu-btn"><i class="fas fa-times">=</i></label>
         </ul>
-    </nav>
-    
-</header>
+        <ul *ngIf="userDetails==null" class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/">בית</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/login">התחבר</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/register">הירשם</a>
+            </li>
+         </ul>
+        <div class="d-flex">
+            <a class="navbar-brand" routerLink="/">Beauty Salons</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  

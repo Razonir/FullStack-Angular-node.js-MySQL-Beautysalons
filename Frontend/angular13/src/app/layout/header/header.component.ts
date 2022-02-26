@@ -12,6 +12,7 @@ export class HeaderComponent implements OnInit {
 
   userDetails:any
   data:any
+
   constructor(private businessService:BusinessService,private userService:UserService){}
   ngOnInit(){
     let uid = localStorage.getItem("uid");
@@ -24,7 +25,7 @@ export class HeaderComponent implements OnInit {
   }
 
   signout(){
-    return localStorage.removeItem('token'),    this.goToHome();
+    return localStorage.clear(),    this.goToHome();
   }  
    menuShow() {
     document.getElementById("menu")?.classList.toggle("show");
