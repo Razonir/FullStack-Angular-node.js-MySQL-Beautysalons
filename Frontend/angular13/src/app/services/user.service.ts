@@ -4,6 +4,7 @@ import { User } from '../model/user';
 import { Observable, BehaviorSubject } from "rxjs";
 import { first, catchError, tap } from "rxjs/operators";
 import { ErrorHandlerService } from "./error-handler.service";
+import { async } from '@angular/core/testing';
 
 @Injectable({
   providedIn: 'root'
@@ -27,7 +28,8 @@ export class UserService {
     return this.httpClient.get(users);
   }
 
-  removeuser(uid:any){
+  async removeuser(uid:any){
+    console.log(2);
     let users = this.baseURL+'auth/users/'
     return this.httpClient.delete(users+uid);
   }

@@ -24,9 +24,9 @@ export class BackComponent implements OnInit {
     })
   }
 
-  removeUser(uid:string) {
+  async removeUser(uid:string) {
     console.log(1);
-    return this.userService.removeuser(parseInt(uid)), window.location.reload();
+    return await this.userService.removeuser(uid);
   }
 }
 
