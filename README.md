@@ -21,7 +21,13 @@ Every registered business receives a customized business page for him for free!
 ## Databases
 - MySQL
 
+## Deploy 
+- Frontend - Netlify
+- Backend - Heroku
+
+
 ## Some pictures from the project
-### I know you're excited But now I will show you only a blurry picture
-#### The project on my localhost And still not live To see everything you need to install it on your computer or contact me and I will show you everything
-![HomePage](https://github.com/Razonir/FullStack-Angular-node.js-MySQL-Beautysalons/blob/master/Frontend/angular13/src/assets/fullblur.png)
+### I know you're excited But now The project is still in development, but I will let you see what is in the meantime
+<a href="https://beautysalons.netlify.app/" target="_blank">live demo</a>
+
+![HomePage](https://github.com/Razonir/FullStack-Angular-node.js-MySQL-Beautysalons/blob/master/Frontend/angular13/src/assets/screencapture-beautysalons-netlify-app-2022-03-03-21_44_38.png)
