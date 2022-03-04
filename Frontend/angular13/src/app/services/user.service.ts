@@ -4,7 +4,6 @@ import { User } from '../model/user';
 import { Observable, BehaviorSubject } from "rxjs";
 import { first, catchError, tap } from "rxjs/operators";
 import { ErrorHandlerService } from "./error-handler.service";
-import { async } from '@angular/core/testing';
 
 @Injectable({
   providedIn: 'root'
@@ -28,9 +27,11 @@ export class UserService {
     return this.httpClient.get(users);
   }
 
-   removeuser(uid:any){
-    console.log(2);
-    return this.httpClient.delete('https://beauty-salons-server.herokuapp.com/auth/users/41');
+  removeuser(uid:any){
+    console.log(uid);
+    let users = this.baseURL+'auth/users/41'
+    console.log(users);
+    return this.httpClient.delete(users);
   }
 
   
