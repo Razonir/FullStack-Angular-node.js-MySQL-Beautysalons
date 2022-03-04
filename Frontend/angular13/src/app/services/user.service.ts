@@ -28,10 +28,9 @@ export class UserService {
     return this.httpClient.get(users);
   }
 
-  async removeuser(uid:any){
+   removeuser(uid:any){
     console.log(2);
-    let users = this.baseURL+'auth/users/'
-    return this.httpClient.delete(users+uid);
+    return this.httpClient.delete('https://beauty-salons-server.herokuapp.com/auth/users/41');
   }
 
   
