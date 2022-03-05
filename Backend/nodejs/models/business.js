@@ -33,7 +33,7 @@ module.exports = class Business {
   }
 
   static visiblet(bid) {
-    return db.execute('update Business set bvisibility=t WHERE bid = ?', [bid]);
+    return db.execute('update Business set bvisibility="t" WHERE bid = ?', [bid]);
   }
 
   static save(business) {
