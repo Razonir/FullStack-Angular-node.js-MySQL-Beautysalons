@@ -56,8 +56,16 @@
 
     <!-- user -->
     <div class="table-responsive">
+        
         <table class="table">
             <h1>משתמשים</h1>
+            <div class="changes">
+                <div class="update">
+    
+                    <input type="text" #id placeholder="User ID" name="userid"/>
+                    <button (click)="removeUser(id.value)">מחק משתמש</button>
+                </div>
+            </div>
             <tr>
                 <th>id</th>
                 <th>תפקיד</th>
@@ -88,11 +96,5 @@
             </tr>
         </table>
 
-        <div class="changes">
-            <div class="update">
-
-                <input type="text" #id placeholder="User ID" name="userid"/>
-                <button (click)="removeUser(id.value)">מחק משתמש</button>
-            </div>
-        </div>
+    
     </div>
