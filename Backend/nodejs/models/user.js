@@ -21,7 +21,6 @@ module.exports = class User {
   }
 
   static deleteuser(userid) {
-    console.log("4");
     return db.execute('DELETE FROM users WHERE userid = ?',[userid]);
   }
 

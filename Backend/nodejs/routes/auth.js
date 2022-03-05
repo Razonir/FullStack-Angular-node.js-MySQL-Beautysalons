@@ -20,7 +20,6 @@ router.get('/users', userController.fetchAllUsers );
 
 //delete user
 router.delete('/users/:userid',(req,res,next)=>{
-  console.log("3");
   User.deleteuser(req.params.userid)
   .then(result =>{
     res.status(200).json({
