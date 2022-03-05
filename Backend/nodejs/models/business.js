@@ -35,6 +35,9 @@ module.exports = class Business {
   static visiblet(bid) {
     return db.execute('update Business set bvisibility="t" WHERE bid = ?', [bid]);
   }
+  static visiblef(bid) {
+    return db.execute('update Business set bvisibility="f" WHERE bid = ?', [bid]);
+  }
 
   static save(business) {
     return db.execute(

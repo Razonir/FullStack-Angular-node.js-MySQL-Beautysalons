@@ -16,7 +16,6 @@
                 <th>תיאור עסק ראשון</th>
                 <th>תיאור עסק שני</th>
                 <th>אימייל</th>
-                <th>סיסמא</th>
                 <th>עיר</th>
                 <th>כתובת</th>
                 <th>טלפון</th>
@@ -24,8 +23,9 @@
                 <th>לוגו</th>
                 <th>שעות קבלה</th>
                 <th>תוכנית</th>
-                <th>נראות</th>
                 <th>מחירון</th>
+                <th>נראות</th>
+                <th></th>
             </tr>
             <tr *ngFor="let item of data">
                 <td>{{item.bid}}</td>
@@ -36,7 +36,6 @@
                 <td title="{{item.bdescriptionf}}">תוכן ארוך</td>
                 <td title="{{item.bdescriptions}}">תוכן ארוך</td>
                 <td>{{item.bemail}}</td>
-                <td title="{{item.bpassword}}">סמן עלי</td>
                 <td>{{item.bcity}}</td>
                 <td>{{item.baddress}}</td>
                 <td>{{item.bphone}}</td>
@@ -44,25 +43,18 @@
                 <td>{{item.blogo}}</td>
                 <td>{{item.bhour}}</td>
                 <td>{{item.bplan}}</td>
-                <td>{{item.bvisibility}}</td>
                 <td>{{item.bprice}}</td>
+                <td>{{item.bvisibility}}</td>
+                <td>
+                    <button *ngIf="item.bvisibility=='f'" (click)="bvisibilityt(item.bid)">אישור פרסום</button>
+                    <button *ngIf="item.bvisibility=='t'" (click)="bvisibilityf(item.bid)">ביטול פרסום</button>
+                </td>
             </tr>
         </table>
-        <div class="changes">
-            <div class="update">
-            </div>
-        </div>
     </div>
 
     <!-- user -->
     <div class="table-responsive">
-        <div class="changes">
-            <div class="update">
-                <input type="text" #id placeholder="מספר מזהה" name="userid"/>
-                <input type="text" #role placeholder="תפקיד" name="userrole"/><br>
-                <button (click)="roleUser(id.value,role.value)">עדכן משתמש</button>
-            </div>
-        </div>
         <table class="table">
             <h1>משתמשים</h1>
             <tr>
@@ -79,6 +71,7 @@
                 <th>תמונה</th>
                 <th>תאריך</th>
                 <th>מחק</th>
+                <th>שינוי הרשאות</th>
             </tr>
             <tr *ngFor="let item of datauser">
                 <td>{{item.userid}}</td>
@@ -94,6 +87,10 @@
                 <td>{{item.userprofileimg}}</td>
                 <td>{{item.userdate}}</td>
                 <td><button (click)="removeUser(item.userid)">מחק משתמש</button></td>
+                <td>
+                    <button *ngIf="item.userrole=='admin'" (click)="userrolesubscriber(item.userid)">ביטול הרשאות</button>
+                    <button *ngIf="item.userrole=='subscriber'" (click)="userroleadmin(item.userid)">הרשאות מנהל</button>
+                </td>            
             </tr>
         </table>
 

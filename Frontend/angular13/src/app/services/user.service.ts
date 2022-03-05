@@ -27,29 +27,26 @@ export class UserService {
     return this.httpClient.get(users);
   }
 
-  removeuser(uid:any){
+  removeuser(userid:any){
     let users = this.baseURL+'auth/users/'
-    return this.httpClient.delete(users+uid).subscribe(data =>{
+    return this.httpClient.delete(users+userid).subscribe(data =>{
       console.log(data);
     });
   }
-
-  roleuser(uid:any,role:any){
-    let users = this.baseURL+'auth/users/'
-    return this.httpClient.delete(users+uid).subscribe(data =>{
-      console.log(data);
-    });
+  
+  userrolesubscriber(userid:string) {
+    return this.httpClient.post<any>('https://beauty-salons-server.herokuapp.com/auth/users/rolesubscriber/',{"userid":userid});
   }
 
-  
-
-  getUserDetails(uid:any){
-    return this.httpClient.post<any>('https://beauty-salons-server.herokuapp.com/auth',{"uid":uid});
+  userroleadmin(userid:string) {
+    return this.httpClient.post<any>('https://beauty-salons-server.herokuapp.com/auth/users/roleadmin/',{"userid":userid});
   }
 
+  getUserDetails(userid:any){
+    return this.httpClient.post<any>('https://beauty-salons-server.herokuapp.com/auth',{"userid":userid});
+  } 
   
-  
-    login(body:any){
+  login(body:any){
     return this.httpClient.post<any>('https://beauty-salons-server.herokuapp.com/auth/login', body,{
       observe:'body'
     });

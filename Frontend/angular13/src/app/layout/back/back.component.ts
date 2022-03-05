@@ -24,13 +24,23 @@ export class BackComponent implements OnInit {
     })
   }
 
+  
   removeUser(uid:string) {
-    console.log(1);
     return this.userService.removeuser(uid), window.location.reload();
   }
-  roleUser(uid:string,role:string) {
-    console.log(1);
-    return this.userService.roleuser(uid,role), window.location.reload();
+
+  bvisibilityt(bid:string) {
+    return this.businessService.bvisibilityt(bid), window.location.reload();
+  }
+  bvisibilityf(bid:string) {
+    return this.businessService.bvisibilityf(bid), window.location.reload();
+  }
+
+  userrolesubscriber(uid:string) {
+    return this.userService.userrolesubscriber(uid), window.location.reload();
+  }
+  userroleadmin(uid:string) {
+    return this.userService.userroleadmin(uid), window.location.reload();
   }
 }
 
