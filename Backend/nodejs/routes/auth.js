@@ -50,23 +50,6 @@ router.get('/business/:bid',(req,res,next)=>{
   })
 })
 
-//business visible by id
-router.post('/business/visibalet/:bid',(req,res,next)=>{
-  Business.visiblet(req.params.bid)
-  .then(result =>{
-    res.status(200).json({
-      business:result
-    })
-  })
-  .catch(err=>{
-    console.log(err);
-    res.status(500).json({
-      error:err
-    })
-  })
-})
-
-
 
 //user signup
 router.post(
