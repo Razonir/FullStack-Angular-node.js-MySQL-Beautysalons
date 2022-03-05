@@ -34,6 +34,13 @@ export class UserService {
     });
   }
 
+  roleuser(uid:any,role:any){
+    let users = this.baseURL+'auth/users/'
+    return this.httpClient.delete(users+uid).subscribe(data =>{
+      console.log(data);
+    });
+  }
+
   
 
   getUserDetails(uid:any){

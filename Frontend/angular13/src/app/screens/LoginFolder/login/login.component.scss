@@ -123,6 +123,10 @@
   margin-left: 15px;
   cursor: pointer;
 }
+
+.fa-eye:before,.fa-eye-slash:before{
+  z-index: 99999 !important;
+}
   @media screen and (max-width: 1000px) {
     .img{
       display: none !important;

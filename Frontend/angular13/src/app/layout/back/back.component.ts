@@ -28,6 +28,10 @@ export class BackComponent implements OnInit {
     console.log(1);
     return this.userService.removeuser(uid), window.location.reload();
   }
+  roleUser(uid:string,role:string) {
+    console.log(1);
+    return this.userService.roleuser(uid,role), window.location.reload();
+  }
 }
 
 
