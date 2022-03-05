@@ -25,7 +25,6 @@
                 <th>תוכנית</th>
                 <th>מחירון</th>
                 <th>נראות</th>
-                <th></th>
             </tr>
             <tr *ngFor="let item of data">
                 <td>{{item.bid}}</td>
@@ -45,10 +44,6 @@
                 <td>{{item.bplan}}</td>
                 <td>{{item.bprice}}</td>
                 <td>{{item.bvisibility}}</td>
-                <td>
-                    <button *ngIf="item.bvisibility=='f'" (click)="bvisibilityt(item.bid)">אישור פרסום</button>
-                    <button *ngIf="item.bvisibility=='t'" (click)="bvisibilityf(item.bid)">ביטול פרסום</button>
-                </td>
             </tr>
         </table>
     </div>
@@ -71,7 +66,6 @@
                 <th>תמונה</th>
                 <th>תאריך</th>
                 <th>מחק</th>
-                <th>שינוי הרשאות</th>
             </tr>
             <tr *ngFor="let item of datauser">
                 <td>{{item.userid}}</td>
@@ -87,10 +81,7 @@
                 <td>{{item.userprofileimg}}</td>
                 <td>{{item.userdate}}</td>
                 <td><button (click)="removeUser(item.userid)">מחק משתמש</button></td>
-                <td>
-                    <button *ngIf="item.userrole=='admin'" (click)="userrolesubscriber(item.userid)">ביטול הרשאות</button>
-                    <button *ngIf="item.userrole=='subscriber'" (click)="userroleadmin(item.userid)">הרשאות מנהל</button>
-                </td>            
+          
             </tr>
         </table>
 

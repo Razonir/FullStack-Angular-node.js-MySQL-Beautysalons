@@ -22,12 +22,7 @@ export class BusinessService {
     let url = this.baseURL + 'auth/business';
     return this.httpClient.get(url);
   }
-  bvisibilityt(bid:string) {
-    return this.httpClient.post<any>('https://beauty-salons-server.herokuapp.com/auth/business/visibalet/',{"bid":bid});
-}
-  bvisibilityf(bid:string) {
-    return this.httpClient.post<any>('https://beauty-salons-server.herokuapp.com/auth/business/visibalef/',{"bid":bid});
-}
+
 
   getOne(bid:number): Observable<Business>{
     let url = this.baseURL + 'auth/business/';
