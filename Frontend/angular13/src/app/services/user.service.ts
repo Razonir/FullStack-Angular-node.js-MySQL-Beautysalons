@@ -28,10 +28,10 @@ export class UserService {
   }
 
   removeuser(uid:any){
-    console.log(uid);
-    let users = this.baseURL+'auth/users/41'
-    console.log(users);
-    return this.httpClient.delete(users);
+    let users = this.baseURL+'auth/users/'
+    return this.httpClient.delete(users+uid).subscribe(data =>{
+      console.log(data);
+    });
   }
 
   
