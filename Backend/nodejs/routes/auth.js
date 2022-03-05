@@ -82,22 +82,6 @@ router.post('/business/visibalef/:bid',(req,res,next)=>{
 })
 
 //user to admin by id
-router.post('/users/userroleadmin/:userid',(req,res,next)=>{
-  User.userroleadmin(req.params.userid)
-  .then(result =>{
-    res.status(200).json({
-      user:result
-    })
-  })
-  .catch(err=>{
-    console.log(err);
-    res.status(500).json({
-      error:err
-    })
-  })
-})
-
-//user to subscriber by id
 router.post('/users/roleadmin/:userid',(req,res,next)=>{
   User.userroleadmin(req.params.userid)
   .then(result =>{
@@ -128,6 +112,7 @@ router.post('/users/rolesubscriber/:userid',(req,res,next)=>{
     })
   })
 })
+
 
 //user signup
 router.post(
