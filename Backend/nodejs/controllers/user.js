@@ -17,7 +17,6 @@ exports.fetchAllUsers = async (req, res, next) => {
 
   // delete user
   exports.deleteuser = async (req, res, next) => {
-    console.log("5");
     try {
       const [deleteuser] = await User.deleteuser(5);
       res.status(200).json(deleteuser);
