@@ -65,53 +65,7 @@ router.post('/business/visibalet/:bid',(req,res,next)=>{
     })
   })
 })
-//business visible by id
-router.post('/business/visibalef/:bid',(req,res,next)=>{
-  Business.visiblef(req.params.bid)
-  .then(result =>{
-    res.status(200).json({
-      business:result
-    })
-  })
-  .catch(err=>{
-    console.log(err);
-    res.status(500).json({
-      error:err
-    })
-  })
-})
 
-//user to admin by id
-router.post('/users/roleadmin/:userid',(req,res,next)=>{
-  User.userroleadmin(req.params.userid)
-  .then(result =>{
-    res.status(200).json({
-      user:result
-    })
-  })
-  .catch(err=>{
-    console.log(err);
-    res.status(500).json({
-      error:err
-    })
-  })
-})
-
-//user to subscriber by id
-router.post('/users/rolesubscriber/:userid',(req,res,next)=>{
-  User.rolesubscriber(req.params.userid)
-  .then(result =>{
-    res.status(200).json({
-      user:result
-    })
-  })
-  .catch(err=>{
-    console.log(err);
-    res.status(500).json({
-      error:err
-    })
-  })
-})
 
 
 //user signup

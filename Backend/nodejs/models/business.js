@@ -32,13 +32,6 @@ module.exports = class Business {
     return db.execute('SELECT * FROM Business WHERE bid = ?', [bid]);
   }
 
-  static visiblet(bid) {
-    return db.execute('update Business set bvisibility="t" WHERE bid = ?', [bid]);
-  }
-  static visiblef(bid) {
-    return db.execute('update Business set bvisibility="f" WHERE bid = ?', [bid]);
-  }
-
   static save(business) {
     return db.execute(
       'insert into Business (bfname,blname,bname,bdescription,bdescriptionf,bdescriptions,bemail,bpassword,barea,bcity,baddress,bphone,bsubject,blogo,bhour) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)',

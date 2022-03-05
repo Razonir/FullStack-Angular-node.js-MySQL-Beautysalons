@@ -29,13 +29,6 @@ module.exports = class User {
     return db.execute('SELECT * FROM users WHERE userid = ?', [uid]);
   }
 
-  static rolesubscriber(userid) {
-    return db.execute('update users set userrole="subscriber" WHERE userid = ?', [userid]);
-  }
-  static roleadmin(userid) {
-    return db.execute('update users set userrole="admin" WHERE userid = ?', [userid]);
-  }
-
 
   static save(users) {
     return db.execute(
