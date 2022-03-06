@@ -6,20 +6,20 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/user');
 const Business = require('../models/business');
 
-// userdetails 
-exports.getUserDetails = async(req,res,next) =>{
-  const uid = req.body.uid;
-  try{
-    const userDetails = await User.getDetails(uid);
-    res.status(201).json({ userDetails: userDetails[0][0] });
+// // userdetails 
+// exports.getUserDetails = async(req,res,next) =>{
+//   const uid = req.body.uid;
+//   try{
+//     const userDetails = await User.getDetails(uid);
+//     res.status(201).json({ userDetails: userDetails[0][0] });
 
-  }catch (err) {
-    if (!err.statusCode) {
-      err.statusCode = 500;
-    }
-    next(err);
-  }
-}
+//   }catch (err) {
+//     if (!err.statusCode) {
+//       err.statusCode = 500;
+//     }
+//     next(err);
+//   }
+// }
 
 //user login
 exports.login = async (req, res, next) => {
