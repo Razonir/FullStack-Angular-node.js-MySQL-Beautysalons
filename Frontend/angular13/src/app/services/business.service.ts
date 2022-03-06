@@ -24,7 +24,7 @@ export class BusinessService {
   }
 
 
-  getOne(bid:string): Observable<Business>{
+  getOne(bid:number): Observable<Business>{
     let url = this.baseURL + 'auth/business/';
     return this.httpClient.get(url + bid).pipe(
       map((business:Business) => business)
