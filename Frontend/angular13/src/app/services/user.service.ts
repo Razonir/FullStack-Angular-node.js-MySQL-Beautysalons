@@ -27,20 +27,6 @@ export class UserService {
     return this.httpClient.get(users);
   }
 
-  removeuser(userid:any){
-    let users = this.baseURL+'auth/users/'
-    return this.httpClient.delete(users+userid).subscribe(data =>{
-      console.log(data);
-    });
-  }
-  
-  userrolesubscriber(userid:string) {
-    return this.httpClient.post<any>('https://beauty-salons-server.herokuapp.com/auth/users/rolesubscriber/',{"userid":userid});
-  }
-
-  userroleadmin(userid:string) {
-    return this.httpClient.post<any>('https://beauty-salons-server.herokuapp.com/auth/users/roleadmin/',{"userid":userid});
-  }
 
   getUserDetails(userid:any){
     return this.httpClient.post<any>('https://beauty-salons-server.herokuapp.com/auth',{"userid":userid});

@@ -18,21 +18,6 @@ router.get('/business', businessController.fetchAll);
 //all users data
 router.get('/users', userController.fetchAllUsers ); 
 
-//delete user
-router.delete('/users/:userid',(req,res,next)=>{
-  User.deleteuser(req.params.userid)
-  .then(result =>{
-    res.status(200).json({
-    })
-  })
-  .catch(err=>{
-    console.log(err);
-    res.status(500).json({
-      error:err
-    })
-  })
-})
-
 //business by id
 router.get('/business/:bid',(req,res,next)=>{
   Business.findById(req.params.bid)
