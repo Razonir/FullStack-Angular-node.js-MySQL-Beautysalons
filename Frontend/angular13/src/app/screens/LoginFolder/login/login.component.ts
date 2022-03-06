@@ -30,10 +30,6 @@ export class LoginComponent implements OnInit {
     });
     }  
   ngOnInit(): void {
-    let uid = localStorage.getItem("uid");
-    // this.userService.getUserDetails(uid).subscribe((data)=>{
-    //   this.userDetails = data.userDetails;
-    // });
     this.businessService.getData().subscribe((data)=>{
       this.data=data
     })

@@ -28,9 +28,7 @@ export class UserService {
   }
 
 
-  // getUserDetails(userid:any){
-  //   return this.httpClient.post<any>('https://beauty-salons-server.herokuapp.com/auth',{"userid":userid});
-  // } 
+
   
   login(body:any){
     return this.httpClient.post<any>('https://beauty-salons-server.herokuapp.com/auth/login', body,{

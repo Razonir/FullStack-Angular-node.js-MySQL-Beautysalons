@@ -74,7 +74,6 @@ router.post(
 
 //user login
 router.post('/login',   authController.login);
-// router.post('/',authController.getUserDetails);
 router.get('/username'), verifyToken,function(req,res,next){
   return res.status(200).json(decodedToken.userfname);
 }
