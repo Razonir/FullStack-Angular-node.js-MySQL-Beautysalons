@@ -15,10 +15,10 @@ export class HeaderComponent implements OnInit {
 
   constructor(private businessService:BusinessService,private userService:UserService){}
   ngOnInit(){
-    let uid = localStorage.getItem("uid");
-    this.userService.getUserDetails(uid).subscribe((data)=>{
-      this.userDetails = data.userDetails;
-    });
+    // let uid = localStorage.getItem("uid");
+    // this.userService.getUserDetails(uid).subscribe((data)=>{
+    //   this.userDetails = data.userDetails;
+    // });
     this.businessService.getData().subscribe((data)=>{
       this.data=data
     })
