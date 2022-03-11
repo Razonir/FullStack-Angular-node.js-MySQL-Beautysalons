@@ -37,7 +37,7 @@ export class BusinessService {
       });
   }
     bvisibilityf(bid:string) {
-      return this.httpClient.post<any>('https://beauty-salons-server.herokuapp.com/auth/business/visibalef/',{"bid":bid}.subscribe(data =>{
+      return this.httpClient.post<any>('https://beauty-salons-server.herokuapp.com/auth/business/visibalef/',{"bid":bid}).subscribe(data =>{
         console.log(data);
       });
   }
