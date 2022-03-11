@@ -25,10 +25,10 @@ export class BackComponent implements OnInit {
   }
 
   bvisibilityt(bid:string) {
-    return this.businessService.bvisibilityt(bid), window.location.reload();
+    return this.businessService.bvisibilityt(bid);
   }
   bvisibilityf(bid:string) {
-    return this.businessService.bvisibilityf(bid), window.location.reload();
+    return this.businessService.bvisibilityf(bid);
   }
 
 

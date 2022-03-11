@@ -32,13 +32,9 @@ export class BusinessService {
   }
 
     bvisibilityt(bid:string) {
-      return this.httpClient.post<any>('https://beauty-salons-server.herokuapp.com/auth/business/visibalet/',{"bid":bid}).subscribe(data =>{
-        console.log(data);
-      });
+      return this.httpClient.post<any>('https://beauty-salons-server.herokuapp.com/auth/business/visibalet/',{"bid":bid});
   }
     bvisibilityf(bid:string) {
-      return this.httpClient.post<any>('https://beauty-salons-server.herokuapp.com/auth/business/visibalef/',{"bid":bid}).subscribe(data =>{
-        console.log(data);
-      });
+      return this.httpClient.post<any>('https://beauty-salons-server.herokuapp.com/auth/business/visibalef/',{"bid":bid});
   }
 }
