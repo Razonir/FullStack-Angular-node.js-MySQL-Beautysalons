@@ -25,6 +25,7 @@
                 <th>תוכנית</th>
                 <th>מחירון</th>
                 <th>נראות</th>
+                <th>שינוי נראות</th>
             </tr>
             <tr *ngFor="let item of data">
                 <td>{{item.bid}}</td>
@@ -44,7 +45,10 @@
                 <td>{{item.bplan}}</td>
                 <td>{{item.bprice}}</td>
                 <td>{{item.bvisibility}}</td>
-      
+                <td>
+                    <button *ngIf="item.bvisibility=='f'" (click)="bvisibilityt(item.bid)">אישור פרסום</button>
+                    <button *ngIf="item.bvisibility=='t'" (click)="bvisibilityf(item.bid)">ביטול פרסום</button>
+                </td>
             </tr>
         </table>
     </div>
