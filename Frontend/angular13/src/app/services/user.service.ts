@@ -27,7 +27,12 @@ export class UserService {
     return this.httpClient.get(users);
   }
 
-
+    removeuser(userid:any){
+      let users = this.baseURL+'auth/users/'
+      return this.httpClient.delete(users+userid).subscribe(data =>{
+        console.log(data);
+      });
+    }
 
   
   login(body:any){

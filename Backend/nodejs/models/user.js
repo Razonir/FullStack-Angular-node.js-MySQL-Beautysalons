@@ -23,7 +23,10 @@ module.exports = class User {
   static getDetails(uid) {
     return db.execute('SELECT * FROM users WHERE userid = ?', [uid]);
   }
-
+  static deleteuser(userid) {
+    console.log("4");
+    return db.execute('DELETE FROM users WHERE userid = ?',[userid]);
+  }
 
   static save(users) {
     return db.execute(

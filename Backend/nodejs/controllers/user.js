@@ -15,3 +15,16 @@ exports.fetchAllUsers = async (req, res, next) => {
     }
   };
 
+
+  exports.deleteuser = async (req, res, next) => {
+    console.log("5");
+    try {
+      const [deleteuser] = await User.deleteuser(5);
+      res.status(200).json(deleteuser);
+    } catch (err) {
+      if (!err.statusCode) {
+        err.statusCode = 500;
+      }
+      next(err);
+    }
+  };
