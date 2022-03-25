@@ -119,7 +119,10 @@ $primary: #169aff;
     .cat{
         .categories{
             .one{
-                flex: 0 1 calc(50% - 1rem);
+                flex: 0 1 calc(33% - 1rem);
+                h1{
+                    font-size: 14px !important;
+                }
             }
         }
     }
