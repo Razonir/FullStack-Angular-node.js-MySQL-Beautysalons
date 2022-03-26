@@ -13,12 +13,17 @@ const jwt = require('jsonwebtoken');
 exportbid = Business.bid;
 
 
-
 //business visible by id
-router.post('/business/visibalet/:bid',(req,res,next)=>{
+router.post('/business/visibalet',(req,res,next)=>{
   Business.visiblet(req.params.bid)
   .then(result =>{
     res.status(200).json({
+    })
+  })
+  .catch(err=>{
+    console.log(err);
+    res.status(500).json({
+      error:err
     })
   })
 })

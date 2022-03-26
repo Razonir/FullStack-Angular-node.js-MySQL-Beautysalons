@@ -31,10 +31,11 @@ export class BusinessService {
     )
   }
 
-    bvisibilityt(bid:string) {
-      return this.httpClient.post<any>('https://beauty-salons-server.herokuapp.com/auth/business/visibalet/',{"bid":bid});
+    bvisibilityT(bid:any){
+      let businessurl = this.baseURL+'auth/business/visibalet/'
+      return this.httpClient.post<any>(`${businessurl}`,bid);
   }
-    bvisibilityf(bid:string) {
+    bvisibilityF(bid:any){
       return this.httpClient.post<any>('https://beauty-salons-server.herokuapp.com/auth/business/visibalef/',{"bid":bid});
   }
 }

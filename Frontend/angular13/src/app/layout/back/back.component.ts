@@ -1,4 +1,3 @@
-import { NONE_TYPE } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { BusinessService } from 'src/app/services/business.service';
 import { UserService } from 'src/app/services/user.service';
@@ -25,10 +24,10 @@ export class BackComponent implements OnInit {
   }
 
   bvisibilityt(bid:string) {
-    return this.businessService.bvisibilityt(bid);
+    return this.businessService.bvisibilityT(bid);
   }
   bvisibilityf(bid:string) {
-    return this.businessService.bvisibilityf(bid);
+    return this.businessService.bvisibilityF(bid);
   }
 
   removeUser(uid:string) {
