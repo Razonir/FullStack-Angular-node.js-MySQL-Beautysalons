@@ -31,7 +31,7 @@ export class BusinessService {
     )
   }
 
-    bvisibilityT(bid:any){
+    bvisibilityT(bid:any){ 
       let businessurl = this.baseURL+'auth/business/visibalet/'
       return this.httpClient.post<any>(`${businessurl}`,bid);
   }
