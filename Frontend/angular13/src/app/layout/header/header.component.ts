@@ -12,13 +12,17 @@ export class HeaderComponent implements OnInit {
 
   userDetails:any
   data:any
+  token:any
 
   constructor(private businessService:BusinessService,private userService:UserService){}
   ngOnInit(){
     this.businessService.getData().subscribe((data)=>{
       this.data=data
     })
-  }
+    if(this.token!=null){
+      this.token=true;
+    }
+    }
 
   signout(){
     return localStorage.clear(),    this.goToHome();
