@@ -92,7 +92,6 @@ exports.signupbusiness = async (req, res, next) => {
   const bname = req.body.bname;
   const bdescription = req.body.bdescription;
   const bdescriptionf = req.body.bdescriptionf;
-  const bdescriptions = req.body.bdescriptions;
   const bemail = req.body.bemail;
   const bpassword = req.body.bpassword;
   const barea = req.body.barea;
@@ -113,7 +112,6 @@ exports.signupbusiness = async (req, res, next) => {
       bname: bname,
       bdescription: bdescription,
       bdescriptionf: bdescriptionf,
-      bdescriptions: bdescriptions,
       bemail: bemail,
       bpassword: hashedPassword,
       barea: barea,

@@ -1,14 +1,13 @@
 const db = require('../util/database');
 
 module.exports = class Business {
-  constructor(bid,bfname,blname, bname, bdescription,bdescriptionf,bdescriptions,bemail,bpassword,bcity,baddress,bphone,bsubject,blogo,bhour) {
+  constructor(bid,bfname,blname, bname, bdescription,bdescriptionf,bemail,bpassword,bcity,baddress,bphone,bsubject,blogo,bhour) {
     this.bid = bid;
     this.bfname = bfname;
     this.blname = blname;
     this.bname = bname;
     this.bdescription = bdescription;
     this.bdescriptionf = bdescriptionf;
-    this.bdescriptions = bdescriptions;
     this.bemail = bemail;
     this.bpassword = bpassword;
     this.bcity = bcity;
@@ -41,8 +40,8 @@ module.exports = class Business {
 
   static save(business) {
     return db.execute(
-      'insert into Business (bfname,blname,bname,bdescription,bdescriptionf,bdescriptions,bemail,bpassword,barea,bcity,baddress,bphone,bsubject,blogo,bhour) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)',
-      [business.bfname,business.blname,business.bname,business.bdescription,business.bdescriptionf,business.bdescriptions,business.bemail,business.bpassword,business.barea,business.bcity,business.baddress,business.bphone,business.bsubject,business.blogo,business.bhour]
+      'insert into Business (bfname,blname,bname,bdescription,bdescriptionf,bemail,bpassword,barea,bcity,baddress,bphone,bsubject,blogo,bhour) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)',
+      [business.bfname,business.blname,business.bname,business.bdescription,business.bdescriptionf,business.bemail,business.bpassword,business.barea,business.bcity,business.baddress,business.bphone,business.bsubject,business.blogo,business.bhour]
     );
   }
 };

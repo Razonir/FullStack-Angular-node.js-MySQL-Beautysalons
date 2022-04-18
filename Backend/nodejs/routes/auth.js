@@ -108,7 +108,6 @@ router.post(
       body('bname').trim().not().isEmpty(),
       body('bdescription').trim().not().isEmpty(),
       body('bdescriptionf').trim().not().isEmpty(),
-      body('bdescriptions').trim().not().isEmpty(),
       body('bemail').isEmail().normalizeEmail().not().isEmpty(),
       body('bpassword').trim().not().isEmpty(),
       body('bcity').trim().not().isEmpty(),
