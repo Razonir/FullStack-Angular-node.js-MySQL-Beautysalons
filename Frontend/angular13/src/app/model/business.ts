@@ -5,7 +5,6 @@ export class Business {
     bname?: String;
     bdescription?: String;
     bdescriptionf?: String;
-    bdescriptions?: String;
     bemail?: String;
     bpassword?: String;
     bgender?: String;
@@ -18,5 +17,4 @@ export class Business {
     bhour?: String;
     bplan?: String;
     bvisibility?: String;
-    bprice?: String;
 }

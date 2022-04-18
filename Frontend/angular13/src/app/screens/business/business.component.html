@@ -1,7 +1,6 @@
 <app-header></app-header>
 <div class="doublesection">
     <div class="section src">
-        <input type="text" placeholder="הקלידו שם העסק" [(ngModel)]="businessname">
         <input type="text" placeholder="הקלידו שם העיר" [(ngModel)]="businesscity">
 
     </div>
@@ -12,22 +11,22 @@
                     <div class="recommended">
                         <div routerLinkActive="active-link" [routerLink]="['/businesspage/',item.bid]" *ngFor="let item of data" >
                             <div *ngIf="item.bvisibility == 't'">
-                                <div *ngIf="businessname=='' " >
+                                <div *ngIf="type==''  && businesscity!=''" >
                                     <div class="cardR"  *ngIf="city(item.bcity)">
                                         <div class="bigimg"><img src="../../../assets/blogo.png" alt="{{item.bname}}"></div>
                                         <div class="itemR"><a class="bname">{{item.bname}} - {{item.bsubject}}</a></div>
                                         <div class="itemR"><a class="bcity">{{item.bcity}}</a></div>
                                     </div>
                                 </div>
-                                <div *ngIf="businesscity==''">
-                                    <div class="cardR"  *ngIf="name(item.bname)">
+                                <div *ngIf="businesscity==''  && type!=''">
+                                    <div class="cardR"  *ngIf="btype(item.bsubject)">
                                         <div class="bigimg"><img src="../../../assets/blogo.png" alt="{{item.bname}}"></div>
                                         <div class="itemR"><a class="bname">{{item.bname}} - {{item.bsubject}}</a></div>
                                         <div class="itemR"><a class="bcity">{{item.bcity}}</a></div>
                                     </div>
                                 </div>
-                                <div *ngIf="businesscity!='' && businessname!=''">
-                                    <div class="cardR"  *ngIf="name(item.bname) && city(item.bcity)">
+                                <div *ngIf="businesscity!='' && type!=''">
+                                    <div class="cardR"  *ngIf="btype(item.bsubject) && city(item.bcity)">
                                         <div class="bigimg"><img src="../../../assets/blogo.png" alt="{{item.bname}}"></div>
                                         <div class="itemR"><a class="bname">{{item.bname}} - {{item.bsubject}}</a></div>
                                         <div class="itemR"><a class="bcity">{{item.bcity}}</a></div>

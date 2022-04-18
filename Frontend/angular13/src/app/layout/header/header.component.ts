@@ -10,7 +10,7 @@ import { UserService } from 'src/app/services/user.service';
 export class HeaderComponent implements OnInit {
 
 
-  userDetails:any
+  userDetails:any = null;
   data:any
   token:any
 
@@ -19,13 +19,16 @@ export class HeaderComponent implements OnInit {
     this.businessService.getData().subscribe((data)=>{
       this.data=data
     })
-    if(this.token!=null){
-      this.token=true;
+    if(localStorage.getItem('token')!=null){
+      this.userDetails = true;
+    }else{
+      this.userDetails = null;
     }
-    }
+  }
+    
 
   signout(){
-    return localStorage.clear(),    this.goToHome();
+    return localStorage.clear(),  this.userDetails = null,  this.goToHome();
   }  
    menuShow() {
     document.getElementById("menu")?.classList.toggle("show");
@@ -34,6 +37,6 @@ export class HeaderComponent implements OnInit {
     document.getElementById("menu")?.classList.remove("show");
   }
   goToHome(){
-    window.location.href = "https://beautysalons.netlify.app/";
+    window.location.href = "/";
     }
 }

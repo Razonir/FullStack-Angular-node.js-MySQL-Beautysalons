@@ -14,7 +14,6 @@
                 <th>שם עסק</th>
                 <th>תיאור עסק</th>
                 <th>תיאור עסק ראשון</th>
-                <th>תיאור עסק שני</th>
                 <th>אימייל</th>
                 <th>עיר</th>
                 <th>כתובת</th>
@@ -23,7 +22,6 @@
                 <th>לוגו</th>
                 <th>שעות קבלה</th>
                 <th>תוכנית</th>
-                <th>מחירון</th>
                 <th>נראות</th>
                 <th>שינוי נראות</th>
             </tr>
@@ -34,7 +32,6 @@
                 <td>{{item.bname}}</td>
                 <td title="{{item.bdescription}}">תוכן ארוך</td>
                 <td title="{{item.bdescriptionf}}">תוכן ארוך</td>
-                <td title="{{item.bdescriptions}}">תוכן ארוך</td>
                 <td>{{item.bemail}}</td>
                 <td>{{item.bcity}}</td>
                 <td>{{item.baddress}}</td>
@@ -43,7 +40,6 @@
                 <td>{{item.blogo}}</td>
                 <td>{{item.bhour}}</td>
                 <td>{{item.bplan}}</td>
-                <td>{{item.bprice}}</td>
                 <td>{{item.bvisibility}}</td>
                 <td>
                     <button *ngIf="item.bvisibility=='f'" (click)="bvisibilityt(item.bid)">אישור פרסום</button>

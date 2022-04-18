@@ -16,7 +16,7 @@ const routes: Routes = [
 {path: 'login', component: LoginComponent},
 {path: 'register', component: RegisterComponent},
 {path: 'registerbusiness', component: BusinessregisterComponent},
-{path: 'business', component: BusinessComponent},
+{path: 'business', component: BusinessComponent },
 {path: 'businessinterface', component: BusinessinterfaceComponent},
 {
   path: 'businesspage',
