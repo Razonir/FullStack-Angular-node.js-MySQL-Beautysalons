@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BusinessService } from 'src/app/services/business.service';
 import { UserService } from 'src/app/services/user.service';
 import { Router } from '@angular/router';
+import { Business } from 'src/app/model/business';
 
 @Component({
   selector: 'app-business',
@@ -12,14 +13,14 @@ export class BusinessComponent implements OnInit {
 
   data:any
   businesscity:string =''
-  itype:string =''
-  type:string = ''
+  businessname:string =''
+  itype:string = ''
   constructor(private router: Router,private businessService:BusinessService,private userService:UserService){}
   ngOnInit(){
     this.businessService.getData().subscribe((data)=>{
       this.data=data
     })
-    this.type = history.state.data.name
+    this.itype = history.state.data.name
     
   }
   
@@ -31,12 +32,10 @@ export class BusinessComponent implements OnInit {
     return false;
   }
 
-  btype(itype:string){
-    if(this.type===''){
-      return false;
-    }
-    if(this.type===this.itype){
-      return true;
+  name(iname:string){
+    let len = this.businessname.length;
+    if(iname.substring(0,len)==this.businessname){
+        return true;
     }
     return false;
   }
