@@ -70,7 +70,6 @@
             id="barea"
             name="barea"
             [(ngModel)]="business.barea">
-              <option selected>מחוז</option>
               <option value="1">צפון</option>
               <option value="2">חיפה</option>
               <option value="3">מרכז</option>
@@ -115,14 +114,19 @@
               <label for="bphone">פלאפון</label>
             </div>
             <div class="form-group col-md-6">
-              <input
-                type="text"
-                id="bsubject"
-                name="bsubject"
-                class="form-input"
-                placeholder=" "
-                [(ngModel)]="business.bsubject"
-              />
+
+              <select class="form-select" 
+              aria-label="Default select example"
+              id="bsubject"
+              name="bsubject"
+              [(ngModel)]="business.bsubject">
+                <option value="קעקועים">קעוקעים</option>
+                <option value="ציפורניים">ציפורניים</option>
+                <option value="מאפרות">מאפרות</option>
+                <option value="גבות-שפם">גבות שפם</option>
+                <option value="קוסמטיקאיות">קוסמטיקאיות</option>
+                <option value="ספר">מספרות</option>
+              </select>
               <label for="bsubject">תחום</label>
             </div>
             <div class="form-group col-md-6">

@@ -8,7 +8,7 @@
     <div class="section">
         <div class="page">
             <div class="result">
-                <div class="title">תוצאות חיפוש</div>
+                <div class="title">תוצאות חיפוש: {{itype}}</div>
                     <div class="recommended">
                         <div routerLinkActive="active-link" [routerLink]="['/businesspage/',item.bid]" *ngFor="let item of data" >
                             <div *ngIf="item.bvisibility == 't'">
