@@ -197,21 +197,6 @@ ul.leaders {
 .w3-badge {height:13px;width:13px;padding:0}
 
 
-.gallery{
-    display: flex;
-    img{
-        width: 25%;
-        filter: grayscale(1);
-        padding: 10px;
-        transition: 1s;
-        &:hover{
-            transform: scale(1.1);
-            z-index: 9;
-            filter: grayscale(0);
-        }
-    }
-}
-
 .row{
     align-items: center;
 }

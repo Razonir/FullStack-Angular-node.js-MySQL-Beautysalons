@@ -279,15 +279,6 @@
     /* white-space: nowrap;       /* Uncomment if needed */
   }
   
-  .gallery{
-    display: flex;
-    img{
-        width: 25%;
-        filter: grayscale(1);
-        padding: 10px;
-        transition: 1s;
-    }
-  }
   
   .row{
     align-items: center;
@@ -307,3 +298,14 @@
   .select-label{
     top: 10px;
   } 
+
+
+  @media screen and (max-width: 800px) {
+    .left{
+      display: none;
+    }
+    .row{
+      margin-bottom: 100px;
+    }
+
+}
